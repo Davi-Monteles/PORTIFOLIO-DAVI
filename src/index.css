@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 8% 4%;
+    --foreground: 40 18% 92%;
+    --card: 240 7% 8%;
+    --card-foreground: 40 18% 92%;
+    --popover: 240 7% 8%;
+    --popover-foreground: 40 18% 92%;
+    --primary: 112 100% 71%;
+    --primary-foreground: 240 8% 4%;
+    --secondary: 240 6% 11%;
+    --secondary-foreground: 40 18% 92%;
+    --muted: 240 3% 37%;
+    --muted-foreground: 240 3% 37%;
+    --accent: 112 100% 71%;
+    --accent-foreground: 240 8% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3% 20%;
+    --input: 240 3% 20%;
+    --ring: 112 100% 71%;
+    --radius: 0.25rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: #05070A;
+    color: #F3F1EA;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(75, 225, 255, 0.2);
+    color: #F3F1EA;
+  }
+
+  /* Grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05070A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0B111A;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .text-gradient-green {
+    background: linear-gradient(135deg, #F0EDE6 40%, #7FFF6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-useful {
+    background: linear-gradient(135deg, #F0EDE6 30%, #7FFF6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #5C5C62;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(75, 225, 255, 0.15), transparent);
+  }
+
+  .divider-light {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(92, 92, 98, 0.1), transparent);
+  }
+
+  .tech-grid {
+    background-image: 
+      linear-gradient(rgba(75, 225, 255, 0.05) 1px, transparent 1px), 
+      linear-gradient(90deg, rgba(75, 225, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .tech-grid-small {
+    background-image: 
+      linear-gradient(rgba(75, 225, 255, 0.02) 1px, transparent 1px), 
+      linear-gradient(90deg, rgba(75, 225, 255, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .aurora-glow-subtle {
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(75, 225, 255, 0.09) 0%, rgba(30, 77, 255, 0.05) 30%, transparent 65%);
+  }
+
+  /* Stronger aurora — use on Hero and Contact */
+  .aurora-layer {
+    background:
+      radial-gradient(ellipse 100% 70% at 50% -5%, rgba(75, 225, 255, 0.13) 0%, rgba(126, 255, 107, 0.04) 40%, transparent 70%),
+      radial-gradient(ellipse 60% 50% at 90% 30%, rgba(30, 77, 255, 0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 10% 70%, rgba(122, 92, 255, 0.04) 0%, transparent 55%);
+  }
+
+  /* Subtle star field */
+  .star-field {
+    background-image:
+      radial-gradient(circle, rgba(243,241,234,0.18) 1px, transparent 1px),
+      radial-gradient(circle, rgba(75,225,255,0.12) 1px, transparent 1px);
+    background-size: 130px 130px, 200px 200px;
+    background-position: 0 0, 65px 65px;
+  }
+
+  /* Glow ring — use around photo or accent elements */
+  .cosmic-glow {
+    box-shadow: 0 0 40px rgba(75, 225, 255, 0.1), 0 0 100px rgba(30, 77, 255, 0.06);
+    border: 1px solid rgba(75, 225, 255, 0.18);
+  }
+
+  /* Base body bg class */
+  .cosmic-bg {
+    background-color: #03060B;
+  }
+
+  .cosmic-overlay {
+    background-color: rgba(3, 6, 11, 0.6);
+  }
+
+  .aurora-hero-bg {
+    background: radial-gradient(ellipse 100% 80% at 50% -10%, rgba(75, 225, 255, 0.13) 0%, rgba(126, 255, 107, 0.05) 40%, transparent 70%),
+                url('/cosmic/hero-aurora.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+  }
+
+  .aurora-top {
+    background: url('/cosmic/aurora-glow-top.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    opacity: 0.8;
+  }
+
+  .aurora-bottom {
+    background: url('/cosmic/aurora-glow-bottom.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    opacity: 0.9;
+  }
+
+  .starfield-layer {
+    background-image:
+      radial-gradient(circle, rgba(243,241,234,0.18) 1px, transparent 1px),
+      radial-gradient(circle, rgba(75,225,255,0.12) 1px, transparent 1px),
+      url('/cosmic/starfield-subtle.png');
+    background-size: 130px 130px, 200px 200px, cover;
+    background-position: 0 0, 65px 65px, center;
+    opacity: 0.6;
+    mix-blend-mode: screen;
+  }
+
+  .section-nebula-bg {
+    background: url('/cosmic/section-nebula.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    mix-blend-mode: screen;
+    opacity: 0.15;
+  }
+
+
+
+  .premium-glow-hover {
+    transition: all 0.4s ease;
+  }
+  .premium-glow-hover:hover {
+    box-shadow: 0 0 40px rgba(75, 225, 255, 0.1), inset 0 0 20px rgba(30, 77, 255, 0.04);
+    border-color: rgba(75, 225, 255, 0.25);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
