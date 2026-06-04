@@ -28,3 +28,5 @@ dist-ssr
 "Davi Monteles — Digital Systems_files/"
 .tmp/
 .playwright-mcp/
+
+.vercel
