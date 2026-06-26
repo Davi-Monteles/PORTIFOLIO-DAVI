@@ -89,7 +89,7 @@ export default function About() {
           </p>
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed mt-6" style={{ color: '#878A8C' }}>
-            I'm early in my career, but I learn by building, testing and shipping real projects.
+            I'm early in my career, but I learn by building, testing and shipping real projects. I already work with real clients, automating their customer service with AI.
           </p>
 
           <div className="about-animate flex flex-wrap gap-8 md:gap-12 mt-10">
