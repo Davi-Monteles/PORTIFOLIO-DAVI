@@ -10,6 +10,8 @@ interface Project {
   shortDesc: string;
   number: string;
   year: string;
+  status: string;
+  statusDetail: string;
   problem: string;
   solution: string;
   stack: string[];
@@ -17,108 +19,139 @@ interface Project {
   image: string;
   video?: string;
   objectPosition?: string;
+  demoUrl?: string;
+  demoLabel?: string;
 }
 
-const PROJECTS: Project[] = [
+const ALL_PROJECTS: Project[] = [
   {
     category: 'AGENTE DE STATS ESPORTIVOS EM TEMPO REAL',
     title: 'BetsCount',
-    shortDesc: 'Um agente de IA multi-usuário no WhatsApp que rastreia estatísticas ao vivo por jogador, com memória isolada e contexto de partida ativo para cada operador.',
+    shortDesc: 'Um projeto de agente no WhatsApp para rastrear estatísticas de jogadores ao vivo com contexto isolado por usuário.',
     number: '01 / 08',
     year: '2026',
+    status: 'FERRAMENTA INTERNA PRIVADA',
+    statusDetail: 'Projeto privado - sem link público.',
     problem: 'Operadores de trading esportivo monitorando jogos ao vivo precisam de estatísticas em tempo real, mas as ferramentas que usam frequentemente travam ou lagam, forçando contagem manual sob pressão.',
-    solution: 'Um agente de IA multi-usuário no WhatsApp que rastreia estatísticas de partida ao vivo por jogador, com memória totalmente isolada e contexto de jogo ativo por usuário. Testado com 5 operadores simultâneos antes de ir para produção.',
+    solution: 'Um projeto funcional de agente estruturado em torno de contexto por usuário, memória isolada e fluxos de acompanhamento ao vivo.',
     stack: ['NODE.JS', 'WHATSAPP API (BAILEYS)', 'SUPABASE', 'CLAUDE API'],
-    demonstrates: 'Arquitetura multi-tenant, isolamento de dados em tempo real, deploy em produção, confiabilidade de IA sob carga concorrente',
+    demonstrates: 'Isolamento de dados, fluxos em tempo real e integrações conversacionais',
     image: '/projetos/betcounts.png',
   },
   {
     category: 'INTELIGÊNCIA DE LEADS',
     title: 'Lead OS',
-    shortDesc: 'Um sistema de pesquisa e scoring de leads construído para encontrar, qualificar e organizar oportunidades de negócio.',
+    shortDesc: 'Um piloto de automação para pesquisar, qualificar e organizar oportunidades de negócio.',
     number: '02 / 08',
     year: '2026',
+    status: 'PILOTO DE AUTOMAÇÃO',
+    statusDetail: 'Sem link público disponível.',
     problem: 'Empresas perdem horas pesquisando leads manualmente, pontuando-os de forma inconsistente e perdendo prospects de alto valor em planilhas e caixas de entrada bagunçadas.',
-    solution: 'Um sistema autônomo de prospecção B2B com um agente de IA que pesquisa, valida, pontua e faz contato com leads via WhatsApp — com regras de segurança anti-ban, deduplicação e um funil de outreach estruturado do contato inicial ao fechamento.',
+    solution: 'Um piloto de automação que estrutura pesquisa, validação, pontuação e etapas de contato em um fluxo.',
     stack: ['PYTHON', 'N8N', 'GOOGLE SHEETS', 'APIs', 'APIFY', 'WHATSAPP API', 'AI AGENTS'],
-    demonstrates: 'Automação de processos, lógica de scoring de leads, integração de APIs, pensamento sistêmico para negócios',
+    demonstrates: 'Automação de processos, lógica de pontuação e integração de APIs',
     image: '/projetos/lead inteligence.png',
   },
   {
     category: 'OPERACIONAL DE FITNESS',
     title: 'PowerFit',
-    shortDesc: 'Uma plataforma operacional de fitness para personal trainers com gestão de alunos, estrutura de treinos e agendamento.',
+    shortDesc: 'Um protótipo funcional para personal trainers com gestão de alunos, treinos e agenda.',
     number: '03 / 08',
     year: '2026',
+    status: 'PROTÓTIPO FUNCIONAL',
+    statusDetail: 'Sem link público disponível.',
     problem: 'Personal trainers gerenciam alunos em ferramentas fragmentadas — grupos de WhatsApp, fichas de papel, múltiplos apps. Nenhum lugar único para treinos, progresso e agendamento.',
-    solution: 'Uma plataforma centralizada de operações fitness com gestão de alunos, estruturação de treinos, lógica de agendamento e uma interface de produto limpa que substitui o caos.',
+    solution: 'Um protótipo funcional de produto que reúne gestão de alunos, estrutura de treinos e agenda em uma interface.',
     stack: ['REACT', 'NODE.JS', 'POSTGRESQL', 'TAILWIND'],
-    demonstrates: 'Design de produto, desenvolvimento full-stack, ferramentas operacionais, pensamento centrado no usuário',
+    demonstrates: 'Design de produto, desenvolvimento full-stack e ferramentas operacionais',
     image: '/projetos/powerfit.jpeg',
     objectPosition: 'center 30%',
   },
   {
     category: 'AGENTE DE IA PARA NEGÓCIOS',
     title: 'Max AI',
-    shortDesc: 'Um conceito de assistente de IA para operações, comunicação e fluxo de serviço de negócios locais.',
+    shortDesc: 'Um protótipo de assistente de IA para comunicação e fluxo de serviço de negócios locais.',
     number: '04 / 08',
     year: '2026',
+    status: 'PROTÓTIPO CONCEITUAL',
+    statusDetail: 'Sem link público disponível.',
     problem: 'Negócios locais perdem clientes devido a respostas lentas, mensagens perdidas e fluxo de serviço desorganizado. A equipe fica sobrecarregada com comunicação repetitiva.',
-    solution: 'Um assistente de IA que gerencia consultas de clientes, agenda compromissos e administra a comunicação de serviço através de fluxos conversacionais integrados com ferramentas de negócio.',
+    solution: 'Um protótipo que explora fluxos conversacionais para consultas, agendamentos e comunicação de serviço.',
     stack: ['OPENAI', 'N8N', 'WHATSAPP API', 'WEBHOOKS'],
-    demonstrates: 'Design de agente de IA, automação de fluxos, orquestração de APIs, UX conversacional',
+    demonstrates: 'Design de agente de IA, automação de fluxo e UX conversacional',
     image: '/projetos/max-ai.png',
   },
   {
     category: 'CONCEITO WEB CINEMATOGRÁFICO',
     title: 'Scary Movie 6',
-    shortDesc: 'Um conceito de landing page cinematográfica focado em atmosfera, movimento, tipografia e storytelling visual.',
+    shortDesc: 'Um protótipo visual focado em atmosfera, movimento, tipografia e narrativa.',
     number: '05 / 08',
     year: '2026',
+    status: 'PROTÓTIPO VISUAL',
+    statusDetail: 'Prévia em vídeo disponível nesta página.',
     problem: 'A maioria das landing pages é visualmente plana. Elas comunicam informação mas não criam resposta emocional, atmosfera ou memorabilidade.',
-    solution: 'Um conceito de landing page cinematográfica construído para clima, atmosfera e storytelling no estilo de entretenimento. Prova que o craft de front-end pode criar impacto emocional.',
+    solution: 'Um protótipo visual que explora movimento cinematográfico, tipografia e narrativa de entretenimento.',
     stack: ['NEXT.JS', 'GSAP', 'TAILWIND'],
-    demonstrates: 'Design de movimento, craft de front-end cinematográfico, storytelling visual, direção criativa',
+    demonstrates: 'Motion design, desenvolvimento front-end e narrativa visual',
     image: '/assets/case-scary-movie.jpg',
     video: '/projetos/scary-movie.mp4',
   },
   {
     category: 'FERRAMENTA OPERACIONAL',
     title: 'Sheets Ops',
-    shortDesc: 'Um sistema prático baseado em planilhas para organização de fluxos de trabalho e operações diárias.',
+    shortDesc: 'Uma ferramenta interna privada para organização de fluxos de trabalho e operações diárias.',
     number: '06 / 08',
     year: '2026',
+    status: 'FERRAMENTA INTERNA PRIVADA',
+    statusDetail: 'Projeto privado - sem link público.',
     problem: 'Pequenos negócios e equipes precisam de ferramentas operacionais mas não têm orçamento para software sob medida. Usam planilhas de forma pobre — desestruturadas, propensas a erro, difíceis de manter.',
-    solution: 'Um sistema Google Sheets propositalmente construído com fluxos de trabalho estruturados, cálculos automatizados, lógica de validação e arquitetura de dados limpa para operações diárias.',
+    solution: 'Uma ferramenta interna baseada em planilhas, com fluxos organizados, cálculos e lógica de validação.',
     stack: ['GOOGLE APPS SCRIPT', 'SHEETS', 'FORMS'],
-    demonstrates: 'Pensamento sistêmico prático, automação com ferramentas limitadas, design de processos',
+    demonstrates: 'Design de processos, automação com ferramentas acessíveis e organização de dados',
     image: '/assets/case-sheets-ops.jpg',
     objectPosition: 'center 40%',
   },
   {
     category: 'IA PARA NEGÓCIOS LOCAIS',
     title: 'Barbershop AI',
-    shortDesc: 'Um fluxo de suporte orientado por IA para comunicação com clientes e organização de serviços.',
+    shortDesc: 'Um piloto de automação para comunicação com clientes e organização de serviços.',
     number: '07 / 08',
     year: '2026',
+    status: 'PILOTO DE AUTOMAÇÃO',
+    statusDetail: 'Sem link público disponível.',
     problem: 'Barbearias perdem agendamentos, não acompanham preferências de clientes e têm dificuldade em responder a pedidos de reserva rapidamente.',
-    solution: 'Um fluxo de suporte leve orientado por IA para comunicação com clientes — gerenciando reservas, lembretes, preferências e consultas de serviço através de respostas conversacionais automatizadas.',
+    solution: 'Um piloto de automação que explora fluxos conversacionais para reservas, lembretes e preferências.',
     stack: ['N8N', 'OPENAI', 'WHATSAPP API'],
-    demonstrates: 'IA para negócios locais, automação de fluxos, design de solução de baixo custo',
+    demonstrates: 'Automação conversacional, design de fluxo e atendimento local',
     image: '/projetos/barbershop-ai.png',
   },
   {
     category: 'CAPTURA DE LEADS / DEMO PARA NEGÓCIOS LOCAIS',
     title: 'Automotive Demo',
-    shortDesc: 'Uma landing/demo premium para serviços automotivos construída para testar captura de leads, confiança visual e fluxo de conversão para negócios locais.',
+    shortDesc: 'Uma demo de apresentação para serviços automotivos, focada em captação de leads e confiança visual.',
     number: '08 / 08',
     year: '2026',
+    status: 'DEMO DE APRESENTAÇÃO',
+    statusDetail: 'Sem link público disponível.',
     problem: 'Negócios de serviços automotivos geralmente dependem apenas de Instagram ou WhatsApp, sem uma página estruturada para explicar serviços, capturar interesse e guiar clientes até um orçamento.',
-    solution: 'Uma experiência de landing/demo refinada projetada para apresentar serviços claramente, criar confiança e direcionar clientes interessados para captura de leads ou fluxo no WhatsApp.',
+    solution: 'Uma demo de apresentação que explora comunicação de serviços, sinais de confiança e fluxo de captação.',
     stack: ['WEB DESIGN', 'LANDING PAGE', 'CAPTURA DE LEADS', 'DIREÇÃO VISUAL'],
-    demonstrates: 'Posicionamento de negócio local, landing pages focadas em conversão, criação de demo de vendas, pensamento de fluxo de leads',
+    demonstrates: 'Direção de landing page, fluxos de captação e posicionamento de serviços',
     image: '/projetos/automotive-demo.png',
   },
+];
+
+void ALL_PROJECTS;
+
+const PUBLIC_PROJECTS: Project[] = [
+{category:'INTELIGÊNCIA DE LEADS B2B',title:'Lead Intelligence OS',shortDesc:'Ferramenta funcional local para pesquisar, validar, classificar e organizar leads B2B.',number:'01 / 08',year:'2026',status:'SISTEMA FUNCIONAL LOCAL',statusDetail:'Nenhuma demonstração pública está confirmada.',problem:'Pesquisa, validação, scoring e preparo de contato podem ficar fragmentados.',solution:'Ferramenta local com pesquisa, validação, classificação, critérios de scoring e automação de contato; validada com lotes de aproximadamente 20 leads e capaz de operar lotes maiores conforme configuração e tempo de pesquisa.',stack:['PYTHON','N8N','APIS','AGENTES DE IA'],demonstrates:'Pesquisa de leads, scoring e automação de contato',image:'/projetos/lead inteligence.png'},
+{category:'AGENTE DE ESTATÍSTICAS ESPORTIVAS',title:'BetsCount',shortDesc:'Estudo de caso de agente multiusuário no WhatsApp para estatísticas ao vivo.',number:'02 / 08',year:'2026',status:'ESTUDO DE CASO COM USO REAL',statusDetail:'Código privado. Sem link público.',problem:'Operadores precisam de contexto ao vivo sem compartilhar informações entre conversas.',solution:'Agente multiusuário hospedado na Northflank, com usuários e clientes reais, testado com cinco operadores simultâneos e contexto isolado por usuário. O código privado é apresentado como estudo de caso.',stack:['NODE.JS','SUPABASE','CLAUDE API','NORTHFLANK'],demonstrates:'Isolamento de contexto e fluxos em tempo real',image:'/projetos/betcounts.png'},
+{category:'OPERAÇÕES DE COMUNIDADE',title:'Servidor e Bot Discord',shortDesc:'Projeto privado funcional entregue para cliente, incluindo servidor e bot.',number:'03 / 08',year:'2026',status:'PROJETO PRIVADO PARA CLIENTE',statusDetail:'Código privado aguardando revisão de segurança; vídeo ou estudo de caso poderá ser adicionado depois.',problem:'Comunidades precisam de roles, permissões e automações para operar de forma organizada.',solution:'Servidor e bot Discord funcionais construídos e entregues para cliente, com automações, permissões, roles e fluxos de operação da comunidade.',stack:['DISCORD','NODE.JS','AUTOMAÇÃO'],demonstrates:'Entrega para cliente, permissões e automação',image:'/assets/lab-reportazap.jpg'},
+{category:'EXPERIÊNCIA FITNESS',title:'PowerFit',shortDesc:'Demonstração e piloto funcional em aplicação web para cliente real.',number:'04 / 08',year:'2026',status:'PILOTO FUNCIONAL PARA CLIENTE',statusDetail:'Demonstração funcional pública disponível.',problem:'Personal trainers gerenciam alunos, treinos e rotinas em ferramentas fragmentadas.',solution:'Piloto funcional remunerado para cliente real que reúne as experiências de personal trainer e alunos em aplicação web com Supabase. É demonstração e piloto, não plataforma totalmente pronta para produção.',stack:['REACT','SUPABASE','POSTGRESQL','TAILWIND'],demonstrates:'Produto full-stack e experiência de personal/aluno',image:'/projetos/powerfit.jpeg',demoUrl:'https://powerfit-app.vercel.app',demoLabel:'ABRIR DEMO'},
+{category:'BUSCA POR VAGAS',title:'Hunter Jobs',shortDesc:'Ferramenta interna privada que pesquisa, filtra e classifica oportunidades.',number:'05 / 08',year:'2026',status:'FERRAMENTA INTERNA PRIVADA',statusDetail:'Nenhuma demonstração ou repositório público está confirmado.',problem:'Buscar vagas em várias fontes cria pesquisa repetitiva.',solution:'Ferramenta funcional de uso próprio que pesquisa, filtra e classifica oportunidades para organizar a busca por vagas.',stack:['PYTHON','AUTOMAÇÃO','APIS'],demonstrates:'Classificação de oportunidades e automação',image:'/assets/lab-lead-capture.jpg'},
+{category:'AGENTE DE IA',title:'Max AI',shortDesc:'Protótipo conceitual de assistente de IA para comunicação de atendimento.',number:'06 / 08',year:'2026',status:'PROTÓTIPO CONCEITUAL',statusDetail:'Protótipo conceitual; sem link público.',problem:'Conversas de atendimento podem se tornar repetitivas e difíceis de organizar.',solution:'Protótipo conceitual de fluxos conversacionais para dúvidas, agendamentos e atendimento; não é sistema de cliente, produção ou usuários ativos.',stack:['OPENAI','N8N','WEBHOOKS'],demonstrates:'Conceitos de agentes de IA e UX conversacional',image:'/projetos/max-ai.png'},
+{category:'AUTOMAÇÃO DE SERVIÇO',title:'Barbershop AI',shortDesc:'Protótipo de automação para fluxos de atendimento e agendamento.',number:'07 / 08',year:'2026',status:'PROTÓTIPO DE AUTOMAÇÃO',statusDetail:'Apenas protótipo; sem link público.',problem:'Conversas de agendamento podem ser difíceis de organizar.',solution:'Protótipo de fluxo de atendimento e agendamento. Não está em uso atualmente, não teve cliente real e não é sistema em produção.',stack:['N8N','OPENAI','WHATSAPP API'],demonstrates:'Automação conversacional e fluxos de agendamento',image:'/projetos/barbershop-ai.png'},
+{category:'CONCEITO WEB CINEMATOGRÁFICO',title:'Scary Movie 6',shortDesc:'Protótipo visual focado em atmosfera, movimento, tipografia e narrativa.',number:'08 / 08',year:'2026',status:'PROTÓTIPO VISUAL',statusDetail:'Prévia visual disponível nesta página.',problem:'Landing pages podem comunicar informação com pouca atmosfera visual.',solution:'Protótipo visual que explora movimento cinematográfico, tipografia e narrativa.',stack:['NEXT.JS','GSAP','TAILWIND'],demonstrates:'Design de movimento e narrativa visual',image:'/assets/case-scary-movie.jpg',video:'/projetos/scary-movie.mp4'}
 ];
 
 export default function CaseStudiesPt() {
@@ -126,8 +159,10 @@ export default function CaseStudiesPt() {
   const gridRef = useRef<HTMLDivElement>(null);
   const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = gsap.context(() => {
       if (headerRef.current) {
         gsap.fromTo(
@@ -204,13 +239,13 @@ export default function CaseStudiesPt() {
           className="font-sans font-normal mt-4 mb-20"
           style={{
             fontSize: 16,
-            color: '#5C5C62',
+            color: '#8D939C',
             maxWidth: 520,
             lineHeight: 1.7,
             opacity: 0,
           }}
         >
-          Sistemas e produtos construídos para operações reais, clientes reais, resultados reais.
+          Projetos selecionados, ferramentas funcionais e protótipos que mostram como transformo problemas em software.
         </p>
       </div>
 
@@ -219,10 +254,10 @@ export default function CaseStudiesPt() {
         className="mx-auto grid grid-cols-1 md:grid-cols-2"
         style={{ maxWidth: 1280, padding: '0 48px', gap: 32 }}
       >
-        {PROJECTS.map((project, i) => (
-          <div
+        {PUBLIC_PROJECTS.map((project, i) => (
+          <article
             key={project.title}
-            className="group relative overflow-hidden cursor-pointer transition-all duration-400"
+            aria-labelledby={'project-' + i} className="group relative overflow-hidden transition-all duration-400"
             style={{
               borderRadius: 4,
               aspectRatio: '16/10',
@@ -239,20 +274,25 @@ export default function CaseStudiesPt() {
                 src={project.video}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-600"
                 style={{
+                  filter: 'brightness(1.13) contrast(1.06)',
                   transform: hoveredIndex === i ? 'scale(1.03)' : 'scale(1)',
                   objectPosition: project.objectPosition || 'center',
                 }}
-                autoPlay
+                autoPlay={!prefersReducedMotion}
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                poster={project.image}
+                aria-label={'Prévia em vídeo de ' + project.title}
               />
             ) : (
               <img
                 src={project.image}
-                alt={project.title}
+                alt={'Prévia de ' + project.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-600"
                 style={{
+                  filter: 'brightness(1.13) contrast(1.06)',
                   transform: hoveredIndex === i ? 'scale(1.03)' : 'scale(1)',
                   objectPosition: project.objectPosition || 'center',
                 }}
@@ -263,7 +303,7 @@ export default function CaseStudiesPt() {
             <div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(to top, rgba(13,13,15,0.95) 0%, rgba(13,13,15,0.3) 40%, transparent 70%)',
+                background: 'linear-gradient(to top, rgba(5,7,10,0.82) 0%, rgba(5,7,10,0.48) 42%, rgba(5,7,10,0.08) 72%, transparent 100%)',
               }}
             />
 
@@ -272,14 +312,17 @@ export default function CaseStudiesPt() {
               style={{
                 fontSize: 10,
                 color: '#F0EDE6',
-                letterSpacing: '0.1em',
-                opacity: hoveredIndex === i ? 1 : 0,
+                letterSpacing: '0.08em',
+                backgroundColor: 'rgba(5,7,10,0.74)',
+                border: '1px solid rgba(240,237,230,0.28)',
+                padding: '5px 8px',
+                opacity: 1,
               }}
             >
-              VER &rarr;
+              {project.status}
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8" style={{ background: 'linear-gradient(to top, rgba(5,7,10,0.38), transparent)' }}>
               <span
                 className="font-mono uppercase block mb-2"
                 style={{ fontSize: 10, color: '#7FFF6B', letterSpacing: '0.1em' }}
@@ -287,6 +330,7 @@ export default function CaseStudiesPt() {
                 {project.category}
               </span>
               <h3
+                id={'project-' + i}
                 className="font-serif font-normal"
                 style={{
                   fontSize: 'clamp(24px, 3vw, 40px)',
@@ -298,12 +342,12 @@ export default function CaseStudiesPt() {
               </h3>
               <p
                 className="font-sans font-normal mt-2"
-                style={{ fontSize: 14, color: '#5C5C62', lineHeight: 1.6, maxWidth: 400 }}
+                style={{ fontSize: 14, color: '#D2D8DE', lineHeight: 1.6, maxWidth: 400, textShadow: '0 1px 14px rgba(0,0,0,0.75)' }}
               >
                 {project.shortDesc}
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
@@ -312,11 +356,11 @@ export default function CaseStudiesPt() {
       </div>
 
       <div className="mx-auto" style={{ maxWidth: 1280, padding: '0 48px' }}>
-        {PROJECTS.map((project, i) => (
+        {PUBLIC_PROJECTS.map((project, i) => (
           <div
             key={`detail-${project.title}`}
             ref={(el) => { panelsRef.current[i] = el; }}
-            className="grid grid-cols-1 lg:grid-cols-2"
+            className="project-detail grid grid-cols-1 lg:grid-cols-2"
             style={{
               gap: 64,
               padding: '80px 0',
@@ -344,10 +388,13 @@ export default function CaseStudiesPt() {
               </h3>
               <span
                 className="font-mono block mt-3"
-                style={{ fontSize: 11, color: '#5C5C62', letterSpacing: '0.1em' }}
+                style={{ fontSize: 11, color: '#8D939C', letterSpacing: '0.1em' }}
               >
                 {project.category} &mdash; {project.year}
               </span>
+              <span className="font-mono inline-block mt-5" style={{ fontSize: 10, color: '#F0EDE6', letterSpacing: '0.08em', border: '1px solid rgba(240,237,230,0.2)', padding: '5px 8px' }}>{project.status}</span>
+              <p className="font-sans mt-3" style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.6 }}>{project.statusDetail}</p>
+              {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.demoLabel} <span aria-hidden="true">&rarr;</span></a>}
             </div>
 
             <div>
@@ -358,7 +405,7 @@ export default function CaseStudiesPt() {
                 >
                   PROBLEMA
                 </span>
-                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#5C5C62', lineHeight: 1.7 }}>
+                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#8D939C', lineHeight: 1.7 }}>
                   {project.problem}
                 </p>
               </div>
@@ -389,7 +436,7 @@ export default function CaseStudiesPt() {
                       className="font-mono"
                       style={{
                         fontSize: 10,
-                        color: '#5C5C62',
+                        color: '#8D939C',
                         border: '1px solid rgba(75,225,255,0.15)',
                         borderRadius: 2,
                         padding: '4px 10px',
@@ -406,9 +453,9 @@ export default function CaseStudiesPt() {
                   className="font-mono uppercase block mb-3"
                   style={{ fontSize: 10, color: '#7FFF6B', letterSpacing: '0.1em' }}
                 >
-                  DEMONSTRA
+                  FOCO
                 </span>
-                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#5C5C62', lineHeight: 1.7 }}>
+                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#8D939C', lineHeight: 1.7 }}>
                   {project.demonstrates}
                 </p>
               </div>
@@ -422,6 +469,11 @@ export default function CaseStudiesPt() {
           #case-studies .mx-auto {
             padding-left: 24px !important;
             padding-right: 24px !important;
+          }
+          #case-studies .project-detail {
+            gap: 32px !important;
+            padding: 48px 0 !important;
+            opacity: 1 !important;
           }
         }
       `}</style>

@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SOCIAL_LINKS = [
   { label: 'WHATSAPP', url: 'https://wa.me/5598984162981' },
   { label: 'EMAIL', url: 'mailto:davimonteles62@gmail.com' },
-  { label: 'GITHUB', url: 'https://github.com/thestable9-hue' },
+  { label: 'GITHUB', url: 'https://github.com/Davi-Monteles' },
   { label: 'LINKEDIN', url: 'https://www.linkedin.com/in/davi-monteles-9888333a8/' },
   { label: 'CONTRA', url: 'https://contra.com/davi_monteles_ly96d0y2/work?r=davi_monteles_ly96d0y2' },
 ];
@@ -20,6 +20,7 @@ export default function Contact() {
   const socialRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -146,7 +147,7 @@ export default function Contact() {
           className="font-sans font-normal mx-auto mt-8"
           style={{
             fontSize: 18,
-            color: '#5C5C62',
+            color: '#8D939C',
             maxWidth: 480,
             lineHeight: 1.7,
             opacity: 0,
@@ -192,7 +193,7 @@ export default function Contact() {
             EMAIL &rarr;
           </a>
           <a
-            href="https://github.com/thestable9-hue"
+            href="https://github.com/Davi-Monteles"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-sans text-xs font-medium tracking-widest no-underline bg-transparent transition-colors duration-300"
@@ -242,7 +243,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono uppercase no-underline transition-colors duration-300 hover:text-cream"
-              style={{ fontSize: 11, letterSpacing: '0.08em', color: '#5C5C62' }}
+              style={{ fontSize: 11, letterSpacing: '0.08em', color: '#8D939C' }}
             >
               {link.label}
             </a>
@@ -253,13 +254,13 @@ export default function Contact() {
         <div className="mt-40">
           <p
             className="font-mono"
-            style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}
+            style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}
           >
             &copy; 2026 DAVI MONTELES
           </p>
           <p
             className="font-mono mt-2"
-            style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}
+            style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}
           >
             BUILT WITH INTENT
           </p>

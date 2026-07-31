@@ -10,6 +10,8 @@ interface Project {
   shortDesc: string;
   number: string;
   year: string;
+  status: string;
+  statusDetail: string;
   problem: string;
   solution: string;
   stack: string[];
@@ -17,117 +19,144 @@ interface Project {
   image: string;
   video?: string;
   objectPosition?: string;
+  demoUrl?: string;
+  demoLabel?: string;
 }
 
-const PROJECTS: Project[] = [
+const ALL_PROJECTS: Project[] = [
   {
     category: 'REAL-TIME SPORTS STATS AGENT',
     title: 'BetsCount',
-    shortDesc: 'A multi-user WhatsApp AI agent that tracks live match stats per player, with isolated memory and active-game context for each operator.',
+    shortDesc: 'A multi-user WhatsApp agent case study for live player-stat tracking with isolated user context.',
     number: '01 / 08',
     year: '2026',
+    status: 'REAL-USE CASE STUDY',
+    statusDetail: 'Private code. No public link.',
     problem: 'Sports trading operators monitoring live games need real-time stat tracking, but the tools they use often crash or lag, forcing manual counting under pressure.',
-    solution: 'A multi-user WhatsApp AI agent that tracks live match stats per player, with fully isolated memory and active-game context per user. Tested with 5 simultaneous operators before deploying to production.',
+    solution: 'A Northflank-hosted multi-user agent used by real users and clients. It was tested with five simultaneous operators and keeps context isolated per user. The code remains private and is presented here as a case study.',
     stack: ['NODE.JS', 'WHATSAPP API (BAILEYS)', 'SUPABASE', 'CLAUDE API'],
-    demonstrates: 'Multi-tenant architecture, real-time data isolation, production deployment, AI agent reliability under concurrent load',
+    demonstrates: 'Multi-user context isolation, conversational integrations and real-time workflows',
     image: '/projetos/betcounts.png',
   },
   {
     category: 'LEAD INTELLIGENCE',
-    title: 'Lead OS',
-    shortDesc: 'A lead research and scoring system built to find, qualify and organize business opportunities.',
+    title: 'Lead Intelligence OS',
+    shortDesc: 'A local functional tool that researches, validates, classifies and organizes B2B leads.',
     number: '02 / 08',
     year: '2026',
-    problem: 'Businesses waste hours manually researching leads, scoring them inconsistently, and losing track of high-value prospects in messy spreadsheets and inboxes.',
-    solution: 'An autonomous B2B prospecting system with an AI agent that researches, validates, scores and reaches out to leads via WhatsApp — with anti-ban safety rules, deduplication, and a structured outreach funnel from cold contact to closed deal.',
+    status: 'LOCAL FUNCTIONAL SYSTEM',
+    statusDetail: 'No public demonstration is confirmed.',
+    problem: 'B2B prospecting can become fragmented when research, validation, scoring and contact preparation happen across disconnected steps.',
+    solution: 'A local tool that combines lead research, validation, classification, scoring criteria and contact automation. It was validated with batches of approximately 20 leads and can handle larger batches depending on configuration and research time.',
     stack: ['PYTHON', 'N8N', 'GOOGLE SHEETS', 'APIs', 'APIFY', 'WHATSAPP API', 'AI AGENTS'],
-    demonstrates: 'Process automation, lead scoring logic, API integration, business systems thinking',
+    demonstrates: 'Lead research, scoring logic, contact automation and workflow design',
     image: '/projetos/lead inteligence.png',
   },
   {
     category: 'FITNESS OPERATIONS',
     title: 'PowerFit',
-    shortDesc: 'A fitness operations platform for personal trainers with student management, workout structure and scheduling.',
+    shortDesc: 'A functional web-app demo and pilot for a real client, designed for trainers and students.',
     number: '03 / 08',
     year: '2026',
+    status: 'FUNCTIONAL CLIENT PILOT',
+    statusDetail: 'Prototype only; no public link.',
     problem: 'Personal trainers manage students across fragmented tools — WhatsApp groups, paper logs, multiple apps. No single place for workouts, progress, and scheduling.',
-    solution: 'A centralized fitness operations platform with student management, workout structuring, scheduling logic and a clean product interface that replaces the chaos.',
-    stack: ['REACT', 'NODE.JS', 'POSTGRESQL', 'TAILWIND'],
-    demonstrates: 'Product design, full-stack development, operations tooling, user-centered thinking',
+    solution: 'A paid functional pilot for a real client that brings trainer and student experiences into one web application with Supabase. It is a demo and pilot, not a fully production-ready platform.',
+    stack: ['REACT', 'SUPABASE', 'POSTGRESQL', 'TAILWIND'],
+    demonstrates: 'Full-stack product work, trainer/student experience and Supabase integration',
     image: '/projetos/powerfit.jpeg',
     objectPosition: 'center 30%',
+    demoUrl: 'https://powerfit-app.vercel.app',
+    demoLabel: 'OPEN DEMO',
   },
   {
     category: 'AI BUSINESS AGENT',
     title: 'Max AI',
-    shortDesc: 'An AI assistant concept for local business operations, communication and service flow.',
+    shortDesc: 'A prototype for an AI assistant supporting local-business communication and service flow.',
     number: '04 / 08',
     year: '2026',
+    status: 'CONCEPT PROTOTYPE',
+    statusDetail: 'No public link available.',
     problem: 'Local businesses lose customers to slow response times, missed messages and disorganized service flow. Staff is overwhelmed with repetitive communication.',
-    solution: 'An AI assistant that handles customer inquiries, schedules appointments and manages service communication through conversational workflows integrated with business tools.',
+    solution: 'A prototype that explores conversational workflows for inquiries, scheduling and service communication.',
     stack: ['OPENAI', 'N8N', 'WHATSAPP API', 'WEBHOOKS'],
-    demonstrates: 'AI agent design, workflow automation, API orchestration, conversational UX',
+    demonstrates: 'AI agent design, workflow automation and conversational UX',
     image: '/projetos/max-ai.png',
   },
   {
     category: 'CINEMATIC WEB CONCEPT',
     title: 'Scary Movie 6',
-    shortDesc: 'A cinematic landing page concept focused on atmosphere, motion, typography and visual storytelling.',
+    shortDesc: 'A visual prototype focused on atmosphere, motion, typography and storytelling.',
     number: '05 / 08',
     year: '2026',
+    status: 'VISUAL PROTOTYPE',
+    statusDetail: 'Visual preview available on this page.',
     problem: 'Most landing pages are visually flat. They communicate information but create no emotional response, no atmosphere, no memorability.',
-    solution: 'A cinematic landing page concept built for mood, atmosphere and entertainment-style storytelling. Proves that front-end craft can create emotional impact.',
+    solution: 'A visual prototype exploring cinematic motion, typography and entertainment-style storytelling.',
     stack: ['NEXT.JS', 'GSAP', 'TAILWIND'],
-    demonstrates: 'Motion design, cinematic front-end craft, visual storytelling, creative direction',
+    demonstrates: 'Motion design, front-end craft and visual storytelling',
     image: '/assets/case-scary-movie.jpg',
     video: '/projetos/scary-movie.mp4',
   },
   {
     category: 'OPERATIONS TOOL',
     title: 'Sheets Ops',
-    shortDesc: 'A practical spreadsheet-based system for workflow organization and daily operations.',
+    shortDesc: 'A private internal tool for workflow organization and daily operations.',
     number: '06 / 08',
     year: '2026',
+    status: 'PRIVATE INTERNAL TOOL',
+    statusDetail: 'Private project - no public link.',
     problem: 'Small businesses and teams need operational tools but lack budget for custom software. They default to spreadsheets used poorly — unstructured, error-prone, hard to maintain.',
-    solution: 'A purpose-built Google Sheets system with structured workflows, automated calculations, validation logic and clean data architecture for daily operations.',
+    solution: 'A spreadsheet-based internal tool with organized workflows, calculations and validation logic.',
     stack: ['GOOGLE APPS SCRIPT', 'SHEETS', 'FORMS'],
-    demonstrates: 'Practical systems thinking, automation on limited tooling, process design',
+    demonstrates: 'Process design, automation on limited tooling and data organization',
     image: '/assets/case-sheets-ops.jpg',
     objectPosition: 'center 40%',
   },
   {
     category: 'LOCAL BUSINESS AI',
     title: 'Barbershop AI',
-    shortDesc: 'An AI-driven support flow for customer communication and service organization.',
+    shortDesc: 'An automation prototype for service and booking flows.',
     number: '07 / 08',
     year: '2026',
+    status: 'AUTOMATION PROTOTYPE',
+    statusDetail: 'No public link available.',
     problem: 'Barbershops miss appointments, lose track of customer preferences and struggle to respond to booking inquiries quickly enough.',
-    solution: 'A lightweight AI-driven support flow for customer communication — handling bookings, reminders, preferences and service inquiries through automated conversational responses.',
+    solution: 'An automation prototype for customer-service and booking flows. It is not currently in use, had no real client and is not a production system.',
     stack: ['N8N', 'OPENAI', 'WHATSAPP API'],
-    demonstrates: 'Local business AI, workflow automation, low-cost solution design',
+    demonstrates: 'Conversational automation, workflow design and local-business service flows',
     image: '/projetos/barbershop-ai.png',
   },
   {
     category: 'LEAD CAPTURE / LOCAL BUSINESS DEMO',
     title: 'Automotive Demo',
-    shortDesc: 'A premium automotive service landing/demo built to test lead capture, visual trust and customer conversion flow for local businesses.',
+    shortDesc: 'A presentation demo for automotive services, focused on lead capture and visual trust.',
     number: '08 / 08',
     year: '2026',
+    status: 'PRESENTATION DEMO',
+    statusDetail: 'No public link available.',
     problem: 'Automotive service businesses often rely on Instagram or WhatsApp alone, with no structured page to explain services, capture interest and guide customers toward a quote.',
-    solution: 'A polished landing/demo experience designed to present services clearly, create trust and route interested customers into a lead capture or WhatsApp flow.',
+    solution: 'A presentation demo that explores service communication, trust signals and a lead-capture flow.',
     stack: ['WEB DESIGN', 'LANDING PAGE', 'LEAD CAPTURE', 'VISUAL DIRECTION'],
-    demonstrates: 'Local business positioning, conversion-focused landing pages, sales demo creation, lead flow thinking',
+    demonstrates: 'Landing-page direction, lead-capture flows and service positioning',
     image: '/projetos/automotive-demo.png',
   },
+  { category: 'COMMUNITY OPERATIONS', title: 'Discord Server & Bot', shortDesc: 'A functional private project delivered for a client, covering the server and its bot.', number: '03 / 08', year: '2026', status: 'PRIVATE CLIENT PROJECT', statusDetail: 'Private code pending security review; a video or case study may be added later.', problem: 'Community operations need clear roles, permissions and repeatable automation to keep participation organized.', solution: 'A functional Discord server and bot built and delivered for a client, with automation, roles, permissions and community-operation flows. Private implementation details remain protected while a security review is pending.', stack: ['DISCORD', 'NODE.JS', 'AUTOMATION', 'ROLE MANAGEMENT'], demonstrates: 'Client delivery, community workflows, permissions and automation design', image: '/assets/lab-reportazap.jpg' },
+  { category: 'JOB SEARCH WORKFLOW', title: 'Hunter Jobs', shortDesc: 'A private internal tool that researches, filters and classifies job opportunities.', number: '05 / 08', year: '2026', status: 'PRIVATE INTERNAL TOOL', statusDetail: 'No public demonstration or repository is confirmed.', problem: 'Searching for roles across multiple sources creates repetitive research and makes it harder to organize relevant opportunities.', solution: 'A functional personal tool that researches, filters and classifies opportunities to support a more organized job-search workflow.', stack: ['PYTHON', 'AUTOMATION', 'APIS', 'AI WORKFLOWS'], demonstrates: 'Personal workflow design, opportunity classification and automation', image: '/assets/lab-lead-capture.jpg' },
 ];
+
+const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'BetsCount', 'Discord Server & Bot', 'PowerFit', 'Hunter Jobs', 'Max AI', 'Barbershop AI', 'Scary Movie 6'];
+const PUBLIC_PROJECTS: Project[] = PUBLIC_PROJECT_TITLES.map((title, index) => ({ ...(ALL_PROJECTS.find((project) => project.title === title) as Project), number: String(index + 1).padStart(2, '0') + ' / 08' }));
 
 export default function CaseStudies() {
   const headerRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = gsap.context(() => {
       // Header entrance
       if (headerRef.current) {
@@ -208,13 +237,13 @@ export default function CaseStudies() {
           className="font-sans font-normal mt-4 mb-20"
           style={{
             fontSize: 16,
-            color: '#5C5C62',
+            color: '#8D939C',
             maxWidth: 520,
             lineHeight: 1.7,
             opacity: 0,
           }}
         >
-          Systems and products built for real operations, real customers, real outcomes.
+          Selected projects, functional tools, and prototypes that show how I turn problems into software.
         </p>
       </div>
 
@@ -224,10 +253,10 @@ export default function CaseStudies() {
         className="mx-auto grid grid-cols-1 md:grid-cols-2"
         style={{ maxWidth: 1280, padding: '0 48px', gap: 32 }}
       >
-        {PROJECTS.map((project, i) => (
-          <div
+        {PUBLIC_PROJECTS.map((project, i) => (
+          <article
             key={project.title}
-            className="group relative overflow-hidden cursor-pointer transition-all duration-400"
+            aria-labelledby={'project-' + i} className="group relative overflow-hidden transition-all duration-400"
             style={{
               borderRadius: 4,
               aspectRatio: '16/10',
@@ -245,20 +274,25 @@ export default function CaseStudies() {
                 src={project.video}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-600"
                 style={{
+                  filter: 'brightness(1.13) contrast(1.06)',
                   transform: hoveredIndex === i ? 'scale(1.03)' : 'scale(1)',
                   objectPosition: project.objectPosition || 'center',
                 }}
-                autoPlay
+                autoPlay={!prefersReducedMotion}
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                poster={project.image}
+                aria-label={'Video preview of ' + project.title}
               />
             ) : (
               <img
                 src={project.image}
-                alt={project.title}
+                alt={'Preview of ' + project.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-600"
                 style={{
+                  filter: 'brightness(1.13) contrast(1.06)',
                   transform: hoveredIndex === i ? 'scale(1.03)' : 'scale(1)',
                   objectPosition: project.objectPosition || 'center',
                 }}
@@ -270,25 +304,15 @@ export default function CaseStudies() {
             <div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(to top, rgba(13,13,15,0.95) 0%, rgba(13,13,15,0.3) 40%, transparent 70%)',
+                background: 'linear-gradient(to top, rgba(5,7,10,0.82) 0%, rgba(5,7,10,0.48) 42%, rgba(5,7,10,0.08) 72%, transparent 100%)',
               }}
             />
-
-            {/* Hover "VIEW" label */}
-            <div
-              className="absolute top-4 right-4 font-mono uppercase transition-opacity duration-300"
-              style={{
-                fontSize: 10,
-                color: '#F0EDE6',
-                letterSpacing: '0.1em',
-                opacity: hoveredIndex === i ? 1 : 0,
-              }}
-            >
-              VIEW &rarr;
-            </div>
+            <span className="absolute top-4 right-4 font-mono uppercase" style={{ fontSize: 9, color: '#F0EDE6', letterSpacing: '0.08em', border: '1px solid rgba(240,237,230,0.2)', backgroundColor: 'rgba(5,7,10,0.68)', padding: '5px 8px' }}>
+              {project.status}
+            </span>
 
             {/* Text content */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8" style={{ background: 'linear-gradient(to top, rgba(5,7,10,0.38), transparent)' }}>
               <span
                 className="font-mono uppercase block mb-2"
                 style={{ fontSize: 10, color: '#7FFF6B', letterSpacing: '0.1em' }}
@@ -296,6 +320,7 @@ export default function CaseStudies() {
                 {project.category}
               </span>
               <h3
+                id={'project-' + i}
                 className="font-serif font-normal"
                 style={{
                   fontSize: 'clamp(24px, 3vw, 40px)',
@@ -307,12 +332,12 @@ export default function CaseStudies() {
               </h3>
               <p
                 className="font-sans font-normal mt-2"
-                style={{ fontSize: 14, color: '#5C5C62', lineHeight: 1.6, maxWidth: 400 }}
+                style={{ fontSize: 14, color: '#D2D8DE', lineHeight: 1.6, maxWidth: 400, textShadow: '0 1px 14px rgba(0,0,0,0.75)' }}
               >
                 {project.shortDesc}
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
@@ -323,11 +348,11 @@ export default function CaseStudies() {
 
       {/* Detail Panels */}
       <div className="mx-auto" style={{ maxWidth: 1280, padding: '0 48px' }}>
-        {PROJECTS.map((project, i) => (
+        {PUBLIC_PROJECTS.map((project, i) => (
           <div
             key={`detail-${project.title}`}
             ref={(el) => { panelsRef.current[i] = el; }}
-            className="grid grid-cols-1 lg:grid-cols-2"
+            className="project-detail grid grid-cols-1 lg:grid-cols-2"
             style={{
               gap: 64,
               padding: '80px 0',
@@ -356,10 +381,13 @@ export default function CaseStudies() {
               </h3>
               <span
                 className="font-mono block mt-3"
-                style={{ fontSize: 11, color: '#5C5C62', letterSpacing: '0.1em' }}
+                style={{ fontSize: 11, color: '#8D939C', letterSpacing: '0.1em' }}
               >
                 {project.category} &mdash; {project.year}
               </span>
+              <span className="font-mono inline-block mt-5" style={{ fontSize: 10, color: '#F0EDE6', letterSpacing: '0.08em', border: '1px solid rgba(240,237,230,0.2)', padding: '5px 8px' }}>{project.status}</span>
+              <p className="font-sans mt-3" style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.6 }}>{project.statusDetail}</p>
+              {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.demoLabel} <span aria-hidden="true">&rarr;</span></a>}
             </div>
 
             {/* Right: Details */}
@@ -372,7 +400,7 @@ export default function CaseStudies() {
                 >
                   PROBLEM
                 </span>
-                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#5C5C62', lineHeight: 1.7 }}>
+                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#8D939C', lineHeight: 1.7 }}>
                   {project.problem}
                 </p>
               </div>
@@ -405,7 +433,7 @@ export default function CaseStudies() {
                       className="font-mono"
                       style={{
                         fontSize: 10,
-                        color: '#5C5C62',
+                        color: '#8D939C',
                         border: '1px solid rgba(75,225,255,0.15)',
                         borderRadius: 2,
                         padding: '4px 10px',
@@ -423,9 +451,9 @@ export default function CaseStudies() {
                   className="font-mono uppercase block mb-3"
                   style={{ fontSize: 10, color: '#7FFF6B', letterSpacing: '0.1em' }}
                 >
-                  DEMONSTRATES
+                  FOCUS
                 </span>
-                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#5C5C62', lineHeight: 1.7 }}>
+                <p className="font-sans font-normal" style={{ fontSize: 15, color: '#8D939C', lineHeight: 1.7 }}>
                   {project.demonstrates}
                 </p>
               </div>
@@ -439,6 +467,11 @@ export default function CaseStudies() {
           #case-studies .mx-auto {
             padding-left: 24px !important;
             padding-right: 24px !important;
+          }
+          #case-studies .project-detail {
+            gap: 32px !important;
+            padding: 48px 0 !important;
+            opacity: 1 !important;
           }
         }
       `}</style>

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
+import { applyPortfolioSeo } from './lib/seo';
 
 import Header from './sections/Header';
 import Hero from './sections/Hero';
@@ -16,6 +17,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   useEffect(() => {
+    applyPortfolioSeo('en');
+  }, []);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     // Initialize Lenis smooth scroll
     const lenis = new Lenis({
       lerp: 0.1,
@@ -39,7 +45,7 @@ export default function App() {
   return (
     <div className="relative">
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Manifesto />
         <CaseStudies />

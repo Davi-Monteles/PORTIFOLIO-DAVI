@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Davi Monteles - Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A bilingual portfolio for Davi Monteles, a Brazil-based junior developer focused on full-stack applications, applied AI, automation and API integrations.
 
-Currently, two official plugins are available:
+## Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The site presents authorial builds, functional prototypes, automation pilots and private internal tools with clear evidence labels. It does not invent public repositories, demos, production status, clients or metrics.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 and TypeScript
+- Vite
+- Tailwind CSS
+- GSAP and Lenis
+- Vercel SPA rewrites
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Quality checks
+
+```bash
+npm run lint
+npx tsc -b
+npm run build
+```
+
+## Routes
+
+- `/` - English portfolio
+- `/pt` - Brazilian Portuguese portfolio
+
+## Project evidence policy
+
+Every project has a visible status. Public links are displayed only when a verified destination exists.
+
+- **Private internal tool**: no public link is shown.
+- **Automation pilot**: no public link is shown unless one is verified.
+- **Functional or visual prototype**: presented as a prototype, never as production software.
+- **Presentation demo**: describes a demonstration, not a client deployment.
+
+Private projects may be discussed in an interview only when disclosure is authorized. No private source code, credentials or client information belongs in this repository.
+
+## Structure
+
+- `src/sections` - bilingual page sections
+- `src/lib/seo.ts` - route-aware metadata and Person JSON-LD
+- `public` - portfolio images, video and supporting assets
+- `vercel.json` - SPA rewrite configuration

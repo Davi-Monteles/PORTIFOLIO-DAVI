@@ -22,6 +22,7 @@ export default function HeroPt() {
   const [logIndex, setLogIndex] = useState(0);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     tl.fromTo(metaRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, 0.3)
@@ -125,7 +126,7 @@ export default function HeroPt() {
           style={{
             fontSize: 18,
             lineHeight: 1.7,
-            color: '#5C5C62',
+            color: '#8D939C',
             maxWidth: 560,
             opacity: 0,
           }}
@@ -145,7 +146,7 @@ export default function HeroPt() {
                 />
                 <span
                   className="font-mono uppercase"
-                  style={{ fontSize: 10, letterSpacing: '0.08em', color: '#5C5C62' }}
+                  style={{ fontSize: 10, letterSpacing: '0.08em', color: '#8D939C' }}
                 >
                   {tag}
                 </span>
@@ -213,7 +214,7 @@ export default function HeroPt() {
           }}
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>
+            <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>
               STATUS DO SISTEMA
             </span>
             <div className="flex items-center gap-2">
@@ -226,11 +227,11 @@ export default function HeroPt() {
 
           <div className="mb-1">
             <div className="flex justify-between items-center py-1.5">
-              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>STATUS</span>
+              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>STATUS</span>
               <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>CONSTRUINDO</span>
             </div>
             <div className="flex justify-between items-center py-1.5">
-              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>FOCO</span>
+              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>FOCO</span>
               <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>{FOCUS_VALUES[focusIndex]}</span>
             </div>
           </div>
@@ -239,12 +240,12 @@ export default function HeroPt() {
 
           <div>
             {[
-              { label: 'PROJETOS', value: '6+' },
-              { label: 'SISTEMAS', value: '3' },
-              { label: 'FOCO', value: 'WEB/IA' },
+              { label: 'FOCO', value: 'FULL-STACK + IA' },
+              { label: 'LOCALIZAÇÃO', value: 'BRASIL' },
+              { label: 'DISPONIBILIDADE', value: 'REMOTO' },
             ].map((m) => (
               <div key={m.label} className="flex justify-between items-center py-1.5">
-                <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>{m.label}</span>
+                <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>{m.label}</span>
                 <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>{m.value}</span>
               </div>
             ))}
@@ -253,13 +254,13 @@ export default function HeroPt() {
           <div className="divider my-3" />
 
           <div className="mb-2">
-            <div className="font-mono" style={{ fontSize: 10, color: '#5C5C62' }}>
+            <div className="font-mono" style={{ fontSize: 10, color: '#8D939C' }}>
               {LOG_MESSAGES[logIndex]}
             </div>
           </div>
 
           <div className="flex justify-end mt-2">
-            <span className="font-mono" style={{ fontSize: 9, color: '#5C5C62' }}>DM.SYS // v3.0</span>
+            <span className="font-mono" style={{ fontSize: 9, color: '#8D939C' }}>DM.SYS // v3.0</span>
           </div>
         </div>
       </div>

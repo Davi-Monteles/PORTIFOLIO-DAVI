@@ -134,7 +134,7 @@ export default function Hero() {
           style={{
             fontSize: 18,
             lineHeight: 1.7,
-            color: '#5C5C62',
+            color: '#8D939C',
             maxWidth: 560,
             opacity: 0,
           }}
@@ -154,7 +154,7 @@ export default function Hero() {
                 />
                 <span
                   className="font-mono uppercase"
-                  style={{ fontSize: 10, letterSpacing: '0.08em', color: '#5C5C62' }}
+                  style={{ fontSize: 10, letterSpacing: '0.08em', color: '#8D939C' }}
                 >
                   {tag}
                 </span>
@@ -224,7 +224,7 @@ export default function Hero() {
         >
           {/* Top bar */}
           <div className="flex items-center justify-between mb-3">
-            <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>
+            <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>
               SYSTEM STATUS
             </span>
             <div className="flex items-center gap-2">
@@ -238,11 +238,11 @@ export default function Hero() {
           {/* Status rows */}
           <div className="mb-1">
             <div className="flex justify-between items-center py-1.5">
-              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>STATUS</span>
+              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>STATUS</span>
               <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>BUILDING</span>
             </div>
             <div className="flex justify-between items-center py-1.5">
-              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>FOCUS</span>
+              <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>FOCUS</span>
               <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>{FOCUS_VALUES[focusIndex]}</span>
             </div>
           </div>
@@ -252,12 +252,12 @@ export default function Hero() {
           {/* Metrics */}
           <div>
             {[
-              { label: 'PROJECTS', value: '6+' },
-              { label: 'SYSTEMS', value: '3' },
-              { label: 'FOCUS', value: 'WEB/AI' },
+              { label: 'FOCUS', value: 'FULL-STACK + AI' },
+              { label: 'LOCATION', value: 'BRAZIL' },
+              { label: 'AVAILABILITY', value: 'REMOTE' },
             ].map((m) => (
               <div key={m.label} className="flex justify-between items-center py-1.5">
-                <span className="font-mono uppercase" style={{ fontSize: 10, color: '#5C5C62', letterSpacing: '0.08em' }}>{m.label}</span>
+                <span className="font-mono uppercase" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.08em' }}>{m.label}</span>
                 <span className="font-mono" style={{ fontSize: 11, color: '#F0EDE6' }}>{m.value}</span>
               </div>
             ))}
@@ -267,14 +267,14 @@ export default function Hero() {
 
           {/* Log */}
           <div className="mb-2">
-            <div className="font-mono" style={{ fontSize: 10, color: '#5C5C62' }}>
+            <div className="font-mono" style={{ fontSize: 10, color: '#8D939C' }}>
               {LOG_MESSAGES[logIndex]}
             </div>
           </div>
 
           {/* Bottom */}
           <div className="flex justify-end mt-2">
-            <span className="font-mono" style={{ fontSize: 9, color: '#5C5C62' }}>DM.SYS // v3.0</span>
+            <span className="font-mono" style={{ fontSize: 9, color: '#8D939C' }}>DM.SYS // v3.0</span>
           </div>
         </div>
       </div>
