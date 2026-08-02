@@ -81,7 +81,7 @@ export default function AboutPt() {
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed" style={{ color: '#878A8C' }}>
             <span className="block text-off-white font-medium text-lg mb-4">
-              Sou Davi Monteles, um builder de 18 anos do Brasil trabalhando na interseção entre web, IA e automação.
+              Sou Davi Monteles, desenvolvedor full-stack júnior do Brasil com foco em aplicações web, IA aplicada e automação.
             </span>
             Construo sistemas digitais práticos: sites que comunicam claramente, fluxos de IA que suportam operações e ferramentas que ajudam pequenas equipes a se mover mais rápido.
           </p>

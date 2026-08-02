@@ -33,8 +33,8 @@ const ALL_PROJECTS: Project[] = [
     status: 'REAL-USE CASE STUDY',
     statusDetail: 'Private code. No public link.',
     problem: 'Sports trading operators monitoring live games need real-time stat tracking, but the tools they use often crash or lag, forcing manual counting under pressure.',
-    solution: 'A Northflank-hosted multi-user agent used by real users and clients. It was tested with five simultaneous operators and keeps context isolated per user. The code remains private and is presented here as a case study.',
-    stack: ['NODE.JS', 'WHATSAPP API (BAILEYS)', 'SUPABASE', 'CLAUDE API'],
+    solution: 'A Northflank-hosted multi-user agent used by real users. It was tested with five simultaneous operators and keeps context isolated per user. The code remains private and is presented here as a case study.',
+    stack: ['PYTHON', 'POSTGRESQL', 'SUPABASE', 'APIS', 'NORTHFLANK'],
     demonstrates: 'Multi-user context isolation, conversational integrations and real-time workflows',
     image: '/projetos/betcounts.png',
   },
@@ -47,7 +47,7 @@ const ALL_PROJECTS: Project[] = [
     status: 'LOCAL FUNCTIONAL SYSTEM',
     statusDetail: 'No public demonstration is confirmed.',
     problem: 'B2B prospecting can become fragmented when research, validation, scoring and contact preparation happen across disconnected steps.',
-    solution: 'A local tool that combines lead research, validation, classification, scoring criteria and contact automation. It was validated with batches of approximately 20 leads and can handle larger batches depending on configuration and research time.',
+    solution: 'A local tool that combines lead research, validation, classification, scoring criteria and contact automation. Its current workflow processes batches of approximately 20 leads.',
     stack: ['PYTHON', 'N8N', 'GOOGLE SHEETS', 'APIs', 'APIFY', 'WHATSAPP API', 'AI AGENTS'],
     demonstrates: 'Lead research, scoring logic, contact automation and workflow design',
     image: '/projetos/lead inteligence.png',
@@ -59,11 +59,11 @@ const ALL_PROJECTS: Project[] = [
     number: '03 / 08',
     year: '2026',
     status: 'FUNCTIONAL CLIENT PILOT',
-    statusDetail: 'Prototype only; no public link.',
+    statusDetail: 'Paid functional pilot with a public demonstration.',
     problem: 'Personal trainers manage students across fragmented tools — WhatsApp groups, paper logs, multiple apps. No single place for workouts, progress, and scheduling.',
-    solution: 'A paid functional pilot for a real client that brings trainer and student experiences into one web application with Supabase. It is a demo and pilot, not a fully production-ready platform.',
-    stack: ['REACT', 'SUPABASE', 'POSTGRESQL', 'TAILWIND'],
-    demonstrates: 'Full-stack product work, trainer/student experience and Supabase integration',
+    solution: 'A paid functional pilot for a real client that brings trainer and student experiences into one web application. The public React, JavaScript and Vite demo uses local browser storage; Supabase/PostgreSQL modeling and integration were part of the project but are not fully connected in the public version.',
+    stack: ['REACT', 'JAVASCRIPT', 'VITE', 'SUPABASE', 'POSTGRESQL'],
+    demonstrates: 'Full-stack product work, trainer/student experience and data modeling',
     image: '/projetos/powerfit.jpeg',
     objectPosition: 'center 30%',
     demoUrl: 'https://powerfit-app.vercel.app',
@@ -145,8 +145,8 @@ const ALL_PROJECTS: Project[] = [
   { category: 'JOB SEARCH WORKFLOW', title: 'Hunter Jobs', shortDesc: 'A private internal tool that researches, filters and classifies job opportunities.', number: '05 / 08', year: '2026', status: 'PRIVATE INTERNAL TOOL', statusDetail: 'No public demonstration or repository is confirmed.', problem: 'Searching for roles across multiple sources creates repetitive research and makes it harder to organize relevant opportunities.', solution: 'A functional personal tool that researches, filters and classifies opportunities to support a more organized job-search workflow.', stack: ['PYTHON', 'AUTOMATION', 'APIS', 'AI WORKFLOWS'], demonstrates: 'Personal workflow design, opportunity classification and automation', image: '/assets/lab-lead-capture.jpg' },
 ];
 
-const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'BetsCount', 'Discord Server & Bot', 'PowerFit', 'Hunter Jobs', 'Max AI', 'Barbershop AI', 'Scary Movie 6'];
-const PUBLIC_PROJECTS: Project[] = PUBLIC_PROJECT_TITLES.map((title, index) => ({ ...(ALL_PROJECTS.find((project) => project.title === title) as Project), number: String(index + 1).padStart(2, '0') + ' / 08' }));
+const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'BetsCount', 'Discord Server & Bot', 'PowerFit', 'Hunter Jobs'];
+const PUBLIC_PROJECTS: Project[] = PUBLIC_PROJECT_TITLES.map((title, index) => ({ ...(ALL_PROJECTS.find((project) => project.title === title) as Project), number: String(index + 1).padStart(2, '0') + ' / 05' }));
 
 export default function CaseStudies() {
   const headerRef = useRef<HTMLDivElement>(null);

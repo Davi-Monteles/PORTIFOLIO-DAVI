@@ -84,7 +84,7 @@ export default function About() {
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed" style={{ color: '#878A8C' }}>
             <span className="block text-off-white font-medium text-lg mb-4">
-              I'm Davi Monteles, an 18-year-old builder from Brazil working at the intersection of web, AI and automation.
+              I'm Davi Monteles, a junior full-stack developer from Brazil working with web applications, applied AI and automation.
             </span>
             I build practical digital systems: websites that communicate clearly, AI workflows that support operations, and tools that help small teams move faster.
           </p>
