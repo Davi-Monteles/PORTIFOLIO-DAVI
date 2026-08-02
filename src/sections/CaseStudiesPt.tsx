@@ -21,6 +21,8 @@ interface Project {
   objectPosition?: string;
   demoUrl?: string;
   demoLabel?: string;
+  evidenceUrl?: string;
+  evidenceLabel?: string;
 }
 
 const ALL_PROJECTS: Project[] = [
@@ -151,12 +153,14 @@ const PUBLIC_PROJECTS: Project[] = [
     number: '01 / 05',
     year: '2026',
     status: 'FERRAMENTA FUNCIONAL LOCAL',
-    statusDetail: 'Executada localmente; sem demonstração pública.',
+    statusDetail: 'Executada localmente; estudo de caso público sanitizado disponível.',
     problem: 'Pesquisa, validação, scoring e organização podem ficar fragmentados em diferentes etapas.',
     solution: 'Ferramenta local que integra pesquisa, validação, scoring e organização. O fluxo atual trabalha com lotes de aproximadamente 20 leads.',
     stack: ['PYTHON', 'POSTGRESQL', 'SUPABASE', 'APIS DE LLM', 'WEB SCRAPING'],
     demonstrates: 'Pipeline de dados, scoring e automação de processos',
     image: '/projetos/lead inteligence.png',
+    evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/lead-intelligence-os.md',
+    evidenceLabel: 'VER ESTUDO DE CASO',
   },
   {
     category: 'AGENTE MULTIUSUÁRIO',
@@ -171,6 +175,8 @@ const PUBLIC_PROJECTS: Project[] = [
     stack: ['PYTHON', 'POSTGRESQL', 'SUPABASE', 'APIS', 'NORTHFLANK'],
     demonstrates: 'Isolamento de contexto, persistência e fluxos multiusuário',
     image: '/projetos/betcounts.png',
+    evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/betscount.md',
+    evidenceLabel: 'VER ESTUDO DE CASO',
   },
   {
     category: 'OPERAÇÕES DE COMUNIDADE',
@@ -185,6 +191,8 @@ const PUBLIC_PROJECTS: Project[] = [
     stack: ['NODE.JS', 'DISCORD.JS', 'APIS', 'AUTOMAÇÃO'],
     demonstrates: 'Entrega para cliente, permissões e automação',
     image: '/assets/lab-reportazap.jpg',
+    evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/discord-automation.md',
+    evidenceLabel: 'VER ESTUDO DE CASO',
   },
   {
     category: 'EXPERIÊNCIA FITNESS',
@@ -209,12 +217,14 @@ const PUBLIC_PROJECTS: Project[] = [
     number: '05 / 05',
     year: '2026',
     status: 'FERRAMENTA INTERNA FUNCIONAL',
-    statusDetail: 'Uma edição pública sanitizada está sendo preparada.',
+    statusDetail: 'Uma versão pública sanitizada está disponível.',
     problem: 'Buscar vagas em várias fontes cria pesquisa repetitiva e dificulta a priorização.',
     solution: 'Ferramenta de uso próprio que organiza oportunidades por aderência, senioridade e prioridade, com dashboard e tiers.',
     stack: ['PYTHON', 'WEB SCRAPING', 'APIS DE LLM', 'DASHBOARD WEB'],
     demonstrates: 'Scoring, automação e organização de oportunidades',
     image: '/assets/lab-lead-capture.jpg',
+    evidenceUrl: 'https://github.com/Davi-Monteles/hunter-jobs',
+    evidenceLabel: 'VER REPOSITÓRIO',
   },
 ];
 
@@ -459,6 +469,7 @@ export default function CaseStudiesPt() {
               <span className="font-mono inline-block mt-5" style={{ fontSize: 10, color: '#F0EDE6', letterSpacing: '0.08em', border: '1px solid rgba(240,237,230,0.2)', padding: '5px 8px' }}>{project.status}</span>
               <p className="font-sans mt-3" style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.6 }}>{project.statusDetail}</p>
               {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.demoLabel} <span aria-hidden="true">&rarr;</span></a>}
+              {project.evidenceUrl && <a href={project.evidenceUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.evidenceLabel} <span aria-hidden="true">&rarr;</span></a>}
             </div>
 
             <div>

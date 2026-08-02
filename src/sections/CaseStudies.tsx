@@ -21,6 +21,8 @@ interface Project {
   objectPosition?: string;
   demoUrl?: string;
   demoLabel?: string;
+  evidenceUrl?: string;
+  evidenceLabel?: string;
 }
 
 const ALL_PROJECTS: Project[] = [
@@ -31,12 +33,14 @@ const ALL_PROJECTS: Project[] = [
     number: '01 / 08',
     year: '2026',
     status: 'REAL-USE CASE STUDY',
-    statusDetail: 'Private code. No public link.',
+    statusDetail: 'Private code and user data. A sanitized public case study is available.',
     problem: 'Sports trading operators monitoring live games need real-time stat tracking, but the tools they use often crash or lag, forcing manual counting under pressure.',
     solution: 'A Northflank-hosted multi-user agent used by real users. It was tested with five simultaneous operators and keeps context isolated per user. The code remains private and is presented here as a case study.',
     stack: ['PYTHON', 'POSTGRESQL', 'SUPABASE', 'APIS', 'NORTHFLANK'],
     demonstrates: 'Multi-user context isolation, conversational integrations and real-time workflows',
     image: '/projetos/betcounts.png',
+    evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/betscount.md',
+    evidenceLabel: 'VIEW CASE STUDY',
   },
   {
     category: 'LEAD INTELLIGENCE',
@@ -45,12 +49,14 @@ const ALL_PROJECTS: Project[] = [
     number: '02 / 08',
     year: '2026',
     status: 'LOCAL FUNCTIONAL SYSTEM',
-    statusDetail: 'No public demonstration is confirmed.',
+    statusDetail: 'Runs locally. A sanitized public case study is available.',
     problem: 'B2B prospecting can become fragmented when research, validation, scoring and contact preparation happen across disconnected steps.',
     solution: 'A local tool that combines lead research, validation, classification, scoring criteria and contact automation. Its current workflow processes batches of approximately 20 leads.',
     stack: ['PYTHON', 'N8N', 'GOOGLE SHEETS', 'APIs', 'APIFY', 'WHATSAPP API', 'AI AGENTS'],
     demonstrates: 'Lead research, scoring logic, contact automation and workflow design',
     image: '/projetos/lead inteligence.png',
+    evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/lead-intelligence-os.md',
+    evidenceLabel: 'VIEW CASE STUDY',
   },
   {
     category: 'FITNESS OPERATIONS',
@@ -141,8 +147,8 @@ const ALL_PROJECTS: Project[] = [
     demonstrates: 'Landing-page direction, lead-capture flows and service positioning',
     image: '/projetos/automotive-demo.png',
   },
-  { category: 'COMMUNITY OPERATIONS', title: 'Discord Server & Bot', shortDesc: 'A functional private project delivered for a client, covering the server and its bot.', number: '03 / 08', year: '2026', status: 'PRIVATE CLIENT PROJECT', statusDetail: 'Private code pending security review; a video or case study may be added later.', problem: 'Community operations need clear roles, permissions and repeatable automation to keep participation organized.', solution: 'A functional Discord server and bot built and delivered for a client, with automation, roles, permissions and community-operation flows. Private implementation details remain protected while a security review is pending.', stack: ['DISCORD', 'NODE.JS', 'AUTOMATION', 'ROLE MANAGEMENT'], demonstrates: 'Client delivery, community workflows, permissions and automation design', image: '/assets/lab-reportazap.jpg' },
-  { category: 'JOB SEARCH WORKFLOW', title: 'Hunter Jobs', shortDesc: 'A private internal tool that researches, filters and classifies job opportunities.', number: '05 / 08', year: '2026', status: 'PRIVATE INTERNAL TOOL', statusDetail: 'No public demonstration or repository is confirmed.', problem: 'Searching for roles across multiple sources creates repetitive research and makes it harder to organize relevant opportunities.', solution: 'A functional personal tool that researches, filters and classifies opportunities to support a more organized job-search workflow.', stack: ['PYTHON', 'AUTOMATION', 'APIS', 'AI WORKFLOWS'], demonstrates: 'Personal workflow design, opportunity classification and automation', image: '/assets/lab-lead-capture.jpg' },
+  { category: 'COMMUNITY OPERATIONS', title: 'Discord Server & Bot', shortDesc: 'A functional private project delivered for a client, covering the server and its bot.', number: '03 / 08', year: '2026', status: 'PRIVATE CLIENT PROJECT', statusDetail: 'Private code and community details. A sanitized public case study is available.', problem: 'Community operations need clear roles, permissions and repeatable automation to keep participation organized.', solution: 'A functional Discord server and bot built and delivered for a client, with automation, roles, permissions and community-operation flows. Private implementation details remain protected.', stack: ['DISCORD', 'NODE.JS', 'AUTOMATION', 'ROLE MANAGEMENT'], demonstrates: 'Client delivery, community workflows, permissions and automation design', image: '/assets/lab-reportazap.jpg', evidenceUrl: 'https://github.com/Davi-Monteles/project-case-studies/blob/main/discord-automation.md', evidenceLabel: 'VIEW CASE STUDY' },
+  { category: 'JOB SEARCH WORKFLOW', title: 'Hunter Jobs', shortDesc: 'A functional internal tool that researches, filters and classifies job opportunities.', number: '05 / 08', year: '2026', status: 'FUNCTIONAL INTERNAL TOOL', statusDetail: 'A sanitized public version is available.', problem: 'Searching for roles across multiple sources creates repetitive research and makes it harder to organize relevant opportunities.', solution: 'A functional personal tool that researches, filters and classifies opportunities to support a more organized job-search workflow.', stack: ['PYTHON', 'AUTOMATION', 'APIS', 'AI WORKFLOWS'], demonstrates: 'Personal workflow design, opportunity classification and automation', image: '/assets/lab-lead-capture.jpg', evidenceUrl: 'https://github.com/Davi-Monteles/hunter-jobs', evidenceLabel: 'VIEW REPOSITORY' },
 ];
 
 const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'BetsCount', 'Discord Server & Bot', 'PowerFit', 'Hunter Jobs'];
@@ -388,6 +394,7 @@ export default function CaseStudies() {
               <span className="font-mono inline-block mt-5" style={{ fontSize: 10, color: '#F0EDE6', letterSpacing: '0.08em', border: '1px solid rgba(240,237,230,0.2)', padding: '5px 8px' }}>{project.status}</span>
               <p className="font-sans mt-3" style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.6 }}>{project.statusDetail}</p>
               {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.demoLabel} <span aria-hidden="true">&rarr;</span></a>}
+              {project.evidenceUrl && <a href={project.evidenceUrl} target="_blank" rel="noopener noreferrer" className="inline-block font-mono mt-6" style={{ fontSize: 11, color: '#0D0D0F', backgroundColor: '#7FFF6B', letterSpacing: '0.1em', padding: '12px 16px' }}>{project.evidenceLabel} <span aria-hidden="true">&rarr;</span></a>}
             </div>
 
             {/* Right: Details */}
