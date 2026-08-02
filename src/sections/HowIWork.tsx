@@ -27,7 +27,7 @@ const STEPS = [
     num: '04',
     title: 'Ship and optimize',
     description:
-      'Launch is the beginning. I monitor, adjust, and improve based on how the system actually performs in the real world.',
+      'After validation, I document what was built, iterate on feedback and improve the next version based on use.',
   },
 ];
 
@@ -37,6 +37,7 @@ export default function HowIWork() {
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -143,7 +144,7 @@ export default function HowIWork() {
               </h3>
               <p
                 className="font-sans font-normal mt-2"
-                style={{ fontSize: 14, color: '#5C5C62', lineHeight: 1.7 }}
+                style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.7 }}
               >
                 {step.description}
               </p>

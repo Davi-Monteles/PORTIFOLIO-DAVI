@@ -5,15 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { value: '6+', label: 'PROJETOS' },
-  { value: '3', label: 'SISTEMAS ATIVOS' },
-  { value: '18', label: 'ANOS' },
+  { value: 'FULL-STACK', label: 'FOCO' },
+  { value: 'IA APLICADA', label: 'TRABALHO' },
+  { value: 'BRASIL', label: 'LOCALIZAÇÃO' },
 ];
 
 export default function AboutPt() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -58,7 +59,7 @@ export default function AboutPt() {
         >
           <img
             src="/davi-profile-2.jpeg"
-            alt="Davi Monteles"
+            alt="Retrato de Davi Monteles"
             className="w-full h-full object-cover transition-all duration-500"
             style={{ filter: 'grayscale(0.2) contrast(1.1) brightness(1.05)' }}
             loading="lazy"
@@ -80,14 +81,13 @@ export default function AboutPt() {
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed" style={{ color: '#878A8C' }}>
             <span className="block text-off-white font-medium text-lg mb-4">
-              Sou Davi Monteles, um builder de 18 anos do Brasil trabalhando na interseção entre web, IA e automação.
+              Sou Davi Monteles, desenvolvedor full-stack júnior do Brasil com foco em aplicações web, IA aplicada e automação.
             </span>
             Construo sistemas digitais práticos: sites que comunicam claramente, fluxos de IA que suportam operações e ferramentas que ajudam pequenas equipes a se mover mais rápido.
           </p>
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed mt-6" style={{ color: '#878A8C' }}>
-            Estou no início da minha carreira, mas aprendo construindo, testando e entregando projetos reais. Já trabalho com clientes reais, automatizando o atendimento deles com IA.
-          </p>
+            Estou no início da minha carreira em desenvolvimento, mas já construí soluções para contextos reais: um sistema local de inteligência de leads, um agente multiusuário testado com cinco operadores, um servidor e bot Discord entregue para cliente e um piloto funcional do PowerFit. Também desenvolvo ferramentas e protótipos próprios para aprofundar minhas habilidades em aplicações full-stack, automação e IA aplicada.</p>
 
           <div className="about-animate flex flex-wrap gap-8 md:gap-12 mt-10">
             {STATS.map((stat) => (

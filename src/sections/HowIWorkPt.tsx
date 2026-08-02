@@ -27,7 +27,7 @@ const STEPS = [
     num: '04',
     title: 'Entregar e otimizar',
     description:
-      'O lançamento é só o começo. Monitoro, ajusto e melhoro com base em como o sistema realmente se comporta no mundo real.',
+      'Depois da validação, documento o que foi construído, itero com base no feedback e melhoro a próxima versão a partir do uso.',
   },
 ];
 
@@ -37,6 +37,7 @@ export default function HowIWorkPt() {
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -141,7 +142,7 @@ export default function HowIWorkPt() {
               </h3>
               <p
                 className="font-sans font-normal mt-2"
-                style={{ fontSize: 14, color: '#5C5C62', lineHeight: 1.7 }}
+                style={{ fontSize: 14, color: '#8D939C', lineHeight: 1.7 }}
               >
                 {step.description}
               </p>

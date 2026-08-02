@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
+import { applyPortfolioSeo } from './lib/seo';
 
 import HeaderPt from './sections/HeaderPt';
 import HeroPt from './sections/HeroPt';
@@ -16,6 +17,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AppPt() {
   useEffect(() => {
+    applyPortfolioSeo('pt-BR');
+  }, []);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const lenis = new Lenis({
       lerp: 0.1,
       smoothWheel: true,
@@ -37,7 +43,7 @@ export default function AppPt() {
   return (
     <div className="relative">
       <HeaderPt />
-      <main>
+      <main id="main-content">
         <HeroPt />
         <ManifestoPt />
         <CaseStudiesPt />

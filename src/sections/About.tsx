@@ -5,15 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { value: '6+', label: 'BUILDS' },
-  { value: '3', label: 'ACTIVE SYSTEMS' },
-  { value: '18', label: 'YEARS OLD' },
+  { value: 'FULL-STACK', label: 'FOCUS' },
+  { value: 'APPLIED AI', label: 'WORK' },
+  { value: 'BRAZIL', label: 'LOCATION' },
 ];
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const section = sectionRef.current;
     if (!section) return;
 
@@ -59,7 +60,7 @@ export default function About() {
         >
           <img
             src="/davi-profile-2.jpeg"
-            alt="Davi Monteles"
+            alt="Portrait of Davi Monteles"
             className="w-full h-full object-cover transition-all duration-500"
             style={{ filter: 'grayscale(0.2) contrast(1.1) brightness(1.05)' }}
             loading="lazy"
@@ -83,13 +84,13 @@ export default function About() {
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed" style={{ color: '#878A8C' }}>
             <span className="block text-off-white font-medium text-lg mb-4">
-              I'm Davi Monteles, an 18-year-old builder from Brazil working at the intersection of web, AI and automation.
+              I'm Davi Monteles, a junior full-stack developer from Brazil working with web applications, applied AI and automation.
             </span>
             I build practical digital systems: websites that communicate clearly, AI workflows that support operations, and tools that help small teams move faster.
           </p>
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed mt-6" style={{ color: '#878A8C' }}>
-            I'm early in my career, but I learn by building, testing and shipping real projects. I already work with real clients, automating their customer service with AI.
+            I'm at the beginning of my development career, and I have already built solutions for real contexts: a local lead-intelligence system, a multi-user agent tested with five operators, a Discord server and bot delivered for a client, and a functional PowerFit pilot. I also develop my own tools and prototypes to deepen my full-stack, automation and applied-AI skills.
           </p>
 
           <div className="about-animate flex flex-wrap gap-8 md:gap-12 mt-10">
