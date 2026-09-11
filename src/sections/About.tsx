@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { value: 'FULL-STACK', label: 'FOCUS' },
-  { value: 'APPLIED AI', label: 'WORK' },
+  { value: 'APPLIED AI', label: 'FOCUS' },
+  { value: 'FULL-STACK', label: 'FOUNDATION' },
   { value: 'BRAZIL', label: 'LOCATION' },
 ];
 
@@ -80,17 +80,17 @@ export default function About() {
 
         {/* Text block */}
         <div className="text-left order-1 md:order-2">
-          <span className="about-animate section-label block mb-8">03 / ABOUT</span>
+          <span className="about-animate section-label block mb-8">04 / ABOUT</span>
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed" style={{ color: '#878A8C' }}>
             <span className="block text-off-white font-medium text-lg mb-4">
-              I'm Davi Monteles, a junior full-stack developer from Brazil working with web applications, applied AI and automation.
+              I'm Davi Monteles, a junior developer from Chapadinha, Brazil, focused on applied AI, automation, and integrations.
             </span>
-            I build practical digital systems: websites that communicate clearly, AI workflows that support operations, and tools that help small teams move faster.
+            I use Node.js, TypeScript, Python, React, and PostgreSQL to connect LLM APIs, data, messaging, and interfaces. Full-stack development is my technical foundation and secondary role path.
           </p>
 
           <p className="about-animate font-sans text-[15px] font-normal leading-relaxed mt-6" style={{ color: '#878A8C' }}>
-            I'm at the beginning of my development career, and I have already built solutions for real contexts: a local lead-intelligence system, a multi-user agent tested with five operators, a Discord server and bot delivered for a client, and a functional PowerFit pilot. I also develop my own tools and prototypes to deepen my full-stack, automation and applied-AI skills.
+            Since March 2026, I have built independent and client projects including Lead Intelligence OS, the Node.js/TypeScript Hunter Jobs tool, private BetsCount, the PowerFit pilot, a delivered Discord bot, and Opportunity OS in development. Each case identifies its version, evidence, and limits.
           </p>
 
           <div className="about-animate flex flex-wrap gap-8 md:gap-12 mt-10">

@@ -118,7 +118,7 @@ export default function ContactPt() {
           <div style={{ flex: 1, height: 1, background: 'linear-gradient(270deg, transparent, rgba(75,225,255,0.2))' }} />
         </div>
 
-        <span className="section-label block mb-12">06</span>
+        <span className="section-label block mb-12">07</span>
 
         <h2
           ref={titleRef}
@@ -222,6 +222,29 @@ export default function ContactPt() {
           >
             LINKEDIN
           </a>
+        </div>
+
+        <div className="mt-10 relative z-10">
+          <p className="font-mono uppercase mb-4" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.1em' }}>
+            CURRÍCULOS PARA DOWNLOAD
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { label: 'IA & AUTOMAÇÃO', url: '/cv/Davi_Monteles_CV_IA_Automacao_2026.pdf' },
+              { label: 'FULL-STACK', url: '/cv/Davi_Monteles_CV_FullStack_2026.pdf' },
+              { label: 'BACK-END', url: '/cv/Davi_Monteles_CV_Backend_2026_Revisado.pdf' },
+            ].map((cv) => (
+              <a
+                key={cv.url}
+                href={cv.url}
+                download
+                className="inline-block font-mono no-underline transition-colors duration-300"
+                style={{ fontSize: 10, color: '#7FFF6B', border: '1px solid rgba(127,255,107,0.35)', padding: '9px 14px', letterSpacing: '0.08em' }}
+              >
+                {cv.label} ↓
+              </a>
+            ))}
+          </div>
         </div>
 
         <div

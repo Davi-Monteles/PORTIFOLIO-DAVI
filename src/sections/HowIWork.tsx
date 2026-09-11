@@ -88,7 +88,7 @@ export default function HowIWork() {
       >
         {/* Header */}
         <div ref={headerRef}>
-          <span className="section-label block mb-6">04</span>
+          <span className="section-label block mb-6">05</span>
           <h2
             className="font-serif font-normal uppercase"
             style={{

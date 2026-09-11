@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-const FOCUS_VALUES = ['LEAD SYSTEMS', 'AI WORKFLOWS', 'WEB EXPERIENCES', 'AUTOMATION'];
+const FOCUS_VALUES = ['APPLIED AI', 'AUTOMATION', 'INTEGRATIONS', 'FULL-STACK'];
 const LOG_MESSAGES = [
   'Pipeline initialized',
   'Agent loop active',
@@ -95,7 +95,7 @@ export default function Hero() {
 
       {/* Main content */}
       <div
-        className="relative z-10 w-full"
+        className="hero-content relative z-10 w-full"
         style={{ maxWidth: 1100, margin: '0 auto', padding: '0 48px' }}
       >
         <span ref={metaRef} className="section-label block mb-8" style={{ opacity: 0 }}>
@@ -112,7 +112,7 @@ export default function Hero() {
               opacity: 0,
             }}
           >
-            DIGITAL SYSTEMS
+            APPLIED AI
           </span>
           <span
             ref={line2Ref}
@@ -122,9 +122,8 @@ export default function Hero() {
               opacity: 0,
             }}
           >
-            <span style={{ color: '#F3F1EA' }}>NOT </span>
-            <span className="text-gradient-green">GENERIC</span>
-            <span style={{ color: '#F3F1EA' }}> WEBSITES</span>
+            <span className="text-gradient-green">USEFUL</span>
+            <span style={{ color: '#F3F1EA' }}> INTEGRATIONS</span>
           </span>
         </h1>
 
@@ -139,12 +138,12 @@ export default function Hero() {
             opacity: 0,
           }}
         >
-          I build websites, AI workflows, automations and internal tools that help businesses
-          operate better, capture more opportunities and move faster.
+          Junior Developer | Applied AI, Automation & Integrations. I build tools with LLM APIs,
+          data, and full-stack software for real workflows.
         </p>
 
         <div ref={tagsRef} className="flex flex-wrap items-center gap-4 mt-6">
-          {['WEB', 'AI', 'AUTOMATION', 'SYSTEMS'].map((tag, i) => {
+          {['APPLIED AI', 'AUTOMATION', 'INTEGRATIONS', 'FULL-STACK'].map((tag, i) => {
             const dotColors = ['#7FFF6B', '#7FFF6B', '#5DD3D8', '#7FFF6B'];
             return (
               <div key={tag} className="flex items-center gap-2" style={{ opacity: 0 }}>
@@ -252,7 +251,7 @@ export default function Hero() {
           {/* Metrics */}
           <div>
             {[
-              { label: 'FOCUS', value: 'FULL-STACK + AI' },
+              { label: 'FOCUS', value: 'AI + AUTOMATION' },
               { label: 'LOCATION', value: 'BRAZIL' },
               { label: 'AVAILABILITY', value: 'REMOTE' },
             ].map((m) => (
@@ -310,6 +309,10 @@ export default function Hero() {
           @keyframes scrollPulse {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(250%); }
+          }
+          @media (max-width: 480px) {
+            #hero .hero-content { padding: 0 24px !important; }
+            #hero h1 > span { font-size: 44px !important; }
           }
         `}</style>
       </div>
