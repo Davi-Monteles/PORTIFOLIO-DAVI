@@ -59,6 +59,20 @@ const ALL_PROJECTS: Project[] = [
     evidenceLabel: 'VIEW CASE STUDY',
   },
   {
+    category: 'AI PROVIDERS',
+    title: 'AI Provider Adapters',
+    shortDesc: 'Private services exposing Kimi, DeepSeek, Gemini and GLM in OpenAI format.',
+    number: '02 / 06',
+    year: '2026',
+    status: 'PRIVATE / EXPERIMENTAL CODE',
+    statusDetail: 'No public repository; Qwen is a credited third-party reference.',
+    problem: 'Different providers and models use distinct protocols and formats, making uniform consumption by agents and tools difficult.',
+    solution: 'Separate implementations for Kimi, DeepSeek, Gemini and GLM/Z.AI with SSE streaming, sessions, tool-call emulation and telemetry. Qwen is operated from the credited third-party project, not own authorship.',
+    stack: ['NODE.JS', 'TYPESCRIPT', 'HONO', 'PLAYWRIGHT', 'SSE', 'OPENAI-COMPATIBLE'],
+    demonstrates: 'Integrations, protocols and streaming',
+    image: '/assets/case-max-ai.jpg',
+  },
+  {
     category: 'AGENT & REVIEW SYSTEM',
     title: 'Opportunity OS',
     shortDesc: 'An in-development system for organizing and reviewing different digital opportunities.',
@@ -165,7 +179,7 @@ const ALL_PROJECTS: Project[] = [
   { category: 'OPPORTUNITY MANAGEMENT', title: 'Hunter Jobs', shortDesc: 'A personal Node.js/TypeScript tool for organizing job discovery and review.', number: '04 / 06', year: '2026', status: 'FUNCTIONAL INTERNAL TOOL', statusDetail: 'The public repository is a sanitized edition with synthetic data.', problem: 'Searching across sources creates duplicates, incompatible formats, and repeated decisions.', solution: 'A Node.js/TypeScript pipeline with collectors, normalization, scoring, deduplication, persistence, dashboard, and human review. The public edition does not represent every private component.', stack: ['NODE.JS', 'TYPESCRIPT', 'SCORING', 'PERSISTENCE', 'DASHBOARD'], demonstrates: 'Typed pipeline, explainable rules and human review', image: '/assets/lab-lead-capture.jpg', evidenceUrl: 'https://github.com/Davi-Monteles/hunter-jobs', evidenceLabel: 'VIEW REPOSITORY' },
 ];
 
-const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'Opportunity OS', 'BetsCount', 'Hunter Jobs', 'PowerFit', 'Discord Server & Bot'];
+const PUBLIC_PROJECT_TITLES = ['Lead Intelligence OS', 'AI Provider Adapters', 'Opportunity OS', 'Hunter Jobs', 'PowerFit', 'BetsCount'];
 const PUBLIC_PROJECTS: Project[] = PUBLIC_PROJECT_TITLES.map((title, index) => ({ ...(ALL_PROJECTS.find((project) => project.title === title) as Project), number: String(index + 1).padStart(2, '0') + ' / 06' }));
 
 export default function CaseStudies() {
