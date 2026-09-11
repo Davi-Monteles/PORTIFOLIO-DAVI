@@ -8,34 +8,34 @@ const CATEGORIES = [
   {
     title: 'O QUE CONSTRUO',
     items: [
-      'Sites & landing pages',
-      'Agentes de IA & fluxos',
-      'Sistemas de captura de leads',
-      'Ferramentas internas',
+      'Integrações com APIs de LLM',
+      'Agentes com ferramentas',
       'Pipelines de automação',
+      'Ferramentas internas',
+      'Sistemas de dados e scoring',
       'Protótipos de produto',
     ],
   },
   {
     title: 'TECNOLOGIA',
     items: [
-      'Next.js / React / TypeScript',
-      'Python',
       'Node.js',
+      'TypeScript / JavaScript',
+      'Python',
+      'React / Vite',
       'PostgreSQL',
-      'n8n / Automação',
       'APIs & integrações',
     ],
   },
   {
-    title: 'DESIGN',
+    title: 'BASE E ESTUDO',
     items: [
-      'Design UI/UX',
-      'Movimento & interação',
-      'Sistemas de design',
-      'Prototipagem',
-      'Direção de marca',
-      'Identidade visual',
+      'Full-stack júnior',
+      'APIs REST e webhooks',
+      'Supabase / SQL',
+      'Testes automatizados',
+      'Git / GitHub',
+      'RAG e embeddings (estudo)',
     ],
   },
 ];
@@ -98,7 +98,7 @@ export default function CapabilitiesPt() {
         style={{ maxWidth: 1280, padding: '140px 48px' }}
       >
         <div ref={headerRef}>
-          <span className="section-label block mb-6">05</span>
+          <span className="section-label block mb-6">06</span>
           <h2
             className="font-serif font-normal uppercase"
             style={{

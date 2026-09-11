@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-const FOCUS_VALUES = ['SISTEMAS DE LEADS', 'FLUXOS DE IA', 'EXPERIÊNCIAS WEB', 'AUTOMAÇÃO'];
+const FOCUS_VALUES = ['IA APLICADA', 'AUTOMAÇÃO', 'INTEGRAÇÕES', 'FULL-STACK'];
 const LOG_MESSAGES = [
   'Pipeline inicializado',
   'Loop do agente ativo',
@@ -88,7 +88,7 @@ export default function HeroPt() {
       />
 
       <div
-        className="relative z-10 w-full"
+        className="hero-content relative z-10 w-full"
         style={{ maxWidth: 1100, margin: '0 auto', padding: '0 48px' }}
       >
         <span ref={metaRef} className="section-label block mb-8" style={{ opacity: 0 }}>
@@ -105,7 +105,7 @@ export default function HeroPt() {
               opacity: 0,
             }}
           >
-            DIGITAL SYSTEMS
+            IA APLICADA
           </span>
           <span
             ref={line2Ref}
@@ -115,8 +115,8 @@ export default function HeroPt() {
               opacity: 0,
             }}
           >
-            <span style={{ color: '#F3F1EA' }}>NADA DE </span>
-            <span className="text-gradient-green">GENÉRICO</span>
+            <span className="text-gradient-green">INTEGRAÇÕES</span>
+            <span style={{ color: '#F3F1EA' }}> ÚTEIS</span>
           </span>
         </h1>
 
@@ -131,12 +131,12 @@ export default function HeroPt() {
             opacity: 0,
           }}
         >
-          Crio sites, fluxos de IA, automações e ferramentas internas que ajudam negócios
-          a operar melhor, capturar mais oportunidades e se mover mais rápido.
+          Desenvolvedor Júnior | IA Aplicada, Automação e Integrações. Construo ferramentas
+          com APIs de LLM, dados e software full-stack para resolver fluxos reais.
         </p>
 
         <div ref={tagsRef} className="flex flex-wrap items-center gap-4 mt-6">
-          {['WEB', 'IA', 'AUTOMAÇÃO', 'SISTEMAS'].map((tag, i) => {
+          {['IA APLICADA', 'AUTOMAÇÃO', 'INTEGRAÇÕES', 'FULL-STACK'].map((tag, i) => {
             const dotColors = ['#7FFF6B', '#7FFF6B', '#5DD3D8', '#7FFF6B'];
             return (
               <div key={tag} className="flex items-center gap-2" style={{ opacity: 0 }}>
@@ -240,7 +240,7 @@ export default function HeroPt() {
 
           <div>
             {[
-              { label: 'FOCO', value: 'FULL-STACK + IA' },
+              { label: 'FOCO', value: 'IA + AUTOMAÇÃO' },
               { label: 'LOCALIZAÇÃO', value: 'BRASIL' },
               { label: 'DISPONIBILIDADE', value: 'REMOTO' },
             ].map((m) => (
@@ -295,6 +295,10 @@ export default function HeroPt() {
           @keyframes scrollPulse {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(250%); }
+          }
+          @media (max-width: 480px) {
+            #hero .hero-content { padding: 0 24px !important; }
+            #hero h1 > span { font-size: 44px !important; }
           }
         `}</style>
       </div>

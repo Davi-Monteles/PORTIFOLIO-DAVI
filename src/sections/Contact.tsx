@@ -121,7 +121,7 @@ export default function Contact() {
         </div>
 
         {/* Meta label */}
-        <span className="section-label block mb-12">06</span>
+        <span className="section-label block mb-12">07</span>
 
         {/* Title */}
         <h2
@@ -227,6 +227,20 @@ export default function Contact() {
             onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(240,237,230,0.2)')}
           >
             LINKEDIN
+          </a>
+        </div>
+
+        <div className="mt-10 relative z-10">
+          <p className="font-mono uppercase mb-4" style={{ fontSize: 10, color: '#8D939C', letterSpacing: '0.1em' }}>
+            RESUME DOWNLOAD
+          </p>
+          <a
+            href="/cv/Davi_Monteles_Resume_Software_Developer_Applied_AI_2026_EN.pdf"
+            download
+            className="inline-block font-mono no-underline transition-colors duration-300"
+            style={{ fontSize: 10, color: '#7FFF6B', border: '1px solid rgba(127,255,107,0.35)', padding: '9px 14px', letterSpacing: '0.08em' }}
+          >
+            APPLIED AI & SOFTWARE DEVELOPMENT ↓
           </a>
         </div>
 

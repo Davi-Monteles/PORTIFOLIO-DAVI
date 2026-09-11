@@ -8,34 +8,34 @@ const CATEGORIES = [
   {
     title: 'WHAT I BUILD',
     items: [
-      'Websites & landing pages',
-      'AI agents & workflows',
-      'Lead capture systems',
-      'Internal tools',
+      'LLM API integrations',
+      'Tool-integrated agents',
       'Automation pipelines',
+      'Internal tools',
+      'Data and scoring systems',
       'Product prototypes',
     ],
   },
   {
     title: 'TECHNOLOGY',
     items: [
-      'Next.js / React / TypeScript',
-      'Python',
       'Node.js',
+      'TypeScript / JavaScript',
+      'Python',
+      'React / Vite',
       'PostgreSQL',
-      'n8n / Automation',
       'APIs & integrations',
     ],
   },
   {
-    title: 'DESIGN',
+    title: 'FOUNDATION & STUDY',
     items: [
-      'UI/UX design',
-      'Motion & interaction',
-      'Design systems',
-      'Prototyping',
-      'Brand direction',
-      'Visual identity',
+      'Junior full-stack work',
+      'REST APIs and webhooks',
+      'Supabase / SQL',
+      'Automated tests',
+      'Git / GitHub',
+      'RAG and embeddings (study)',
     ],
   },
 ];
@@ -99,7 +99,7 @@ export default function Capabilities() {
       >
         {/* Header */}
         <div ref={headerRef}>
-          <span className="section-label block mb-6">05</span>
+          <span className="section-label block mb-6">06</span>
           <h2
             className="font-serif font-normal uppercase"
             style={{

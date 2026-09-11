@@ -4,18 +4,18 @@ const SITE_URL = 'https://davimonteles.vercel.app';
 
 const metadata = {
   en: {
-    title: 'Davi Monteles | Junior Full-Stack & Applied AI Developer',
-    description: 'Portfolio of Davi Monteles, a Brazil-based junior developer building full-stack applications, AI workflows and automation tools.',
+    title: 'Davi Monteles | Junior Developer - Applied AI & Automation',
+    description: 'Portfolio of Davi Monteles, a Brazil-based junior developer focused on applied AI, automation, integrations and full-stack software.',
     locale: 'en_US',
     path: '',
-    jobTitle: 'Junior Full-Stack and Applied AI Developer',
+    jobTitle: 'Junior Developer - Applied AI, Automation and Integrations',
   },
   'pt-BR': {
-    title: 'Davi Monteles | Desenvolvedor Full-Stack Junior e IA Aplicada',
-    description: 'Portfolio de Davi Monteles, desenvolvedor júnior no Brasil construindo aplicações full-stack, fluxos de IA e ferramentas de automação.',
+    title: 'Davi Monteles | Desenvolvedor Júnior - IA Aplicada e Automação',
+    description: 'Portfólio de Davi Monteles, desenvolvedor júnior focado em IA aplicada, automação, integrações e software full-stack.',
     locale: 'pt_BR',
     path: '/pt',
-    jobTitle: 'Desenvolvedor Full-Stack Junior e IA Aplicada',
+    jobTitle: 'Desenvolvedor Júnior - IA Aplicada, Automação e Integrações',
   },
 } as const;
 
@@ -75,6 +75,6 @@ export function applyPortfolioSeo(locale: PortfolioLocale) {
       'https://github.com/Davi-Monteles',
       'https://www.linkedin.com/in/davi-monteles-9888333a8/',
     ],
-    knowsAbout: ['Full-stack development', 'Python', 'Applied AI', 'Automation', 'API integrations'],
+    knowsAbout: ['Applied AI', 'Automation', 'API integrations', 'Node.js', 'TypeScript', 'Python', 'React', 'PostgreSQL'],
   });
 }

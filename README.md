@@ -1,6 +1,6 @@
 # Davi Monteles - Professional Portfolio
 
-A bilingual portfolio for Davi Monteles, a Brazil-based junior developer focused on full-stack applications, applied AI, automation and API integrations.
+A bilingual portfolio for Davi Monteles, a Brazil-based junior developer focused on applied AI, automation and API integrations, with full-stack development as his technical foundation.
 
 ## Goals
 
@@ -55,4 +55,5 @@ Private projects may be discussed in an interview only when disclosure is author
 - `src/sections` - bilingual page sections
 - `src/lib/seo.ts` - route-aware metadata and Person JSON-LD
 - `public` - portfolio images, video and supporting assets
+- `public/cv` - current evidence-reviewed PDF resumes available from the contact section
 - `vercel.json` - SPA rewrite configuration
